@@ -1,0 +1,1040 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>22.12.19 TIL</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7409f8a4-5409-431a-9190-debce7e6e662" class="page sans"><header><h1 class="page-title">22.12.19 TIL</h1></header><div class="page-body"><h1 id="99aeecdc-f31b-41dc-a137-296869dc1fc4" class=""><details open=""><summary>0️⃣ Python Overview</summary></details></h1><div class="indented"><h2 id="db1d8532-fdce-4daf-b1d2-e7965898b50d" class="">(1) Origin of Python </h2><p id="a784889d-08c2-418a-b489-c83af70cd083" class="">Gudio Van Rossum이 1989년에 크리스마스에 연구실이 닫혀있자, 심심해서 프로그래밍 언어를 만듦</p><h2 id="6ca4643d-ce89-4fa2-b1c2-ff516d44fdbf" class="">(2) Python의 특징</h2><ul id="7e10a818-2c6e-46b2-8767-71c52db32cac" class="bulleted-list"><li style="list-style-type:disc">플랫폼 독립적인 <strong><mark class="highlight-blue">인터프리어터 언어 </mark></strong><ul id="3ef9bffb-265a-427b-89a9-99c21500c746" class="bulleted-list"><li style="list-style-type:circle">플랫폼이 독립적이다 = 운영체제에 구애받지 않고 실행 가능</li></ul><ul id="397985c7-ef82-4cb7-b58c-43bc0de2a620" class="bulleted-list"><li style="list-style-type:circle">인터프리어터 언어가 아닌 것 = 컴파일 언어<ul id="7132b6af-22ee-4150-b79d-cf7dafc87032" class="bulleted-list"><li style="list-style-type:square">컴파일 언어 ex) C, C++<p id="b657484a-4fce-4d9c-8764-2cb19035c3b4" class="">: OS에 따라서 이진법을 다루는 방식이 다르기 때문에 각자 code를 바꿔주는작업을 진행해줘야 한다. </p></li></ul><ul id="7103a193-a6a9-445f-b857-1048b782ba4a" class="bulleted-list"><li style="list-style-type:square">인터프리터 언어 ex) Python, Java<p id="2e9ecd04-b886-4c84-9ccb-6187ce14396f" class="">: OS 종류에 구애받지 않고 중계장치인 인터프리터기를 통해서 OS에서 실행하게 된다. 하지만, 인터프리터가 중간에 끼어 있기 때문에, 작업 처리에 시간이 걸려 heavy하거나 빠르게 동작해야 하는 경우는 컴파일 언어를 사용한다. </p></li></ul></li></ul></li></ul><ul id="607972b4-e5dc-4ad8-86a5-ed2742dfae7a" class="bulleted-list"><li style="list-style-type:disc">완전 <mark class="highlight-blue"><strong>객체 지향 언어</strong></mark></li></ul><ul id="453e8c28-5a54-4a90-b8ff-0845d7279a55" class="bulleted-list"><li style="list-style-type:disc">동적 타이핑 언어<ul id="f61e268d-3531-4f9d-b986-504e608e1243" class="bulleted-list"><li style="list-style-type:circle">컴파일 언어의 경우, 언어의 type을 앞에 항상 선언을 해주어야 하지만, 파이썬의 경우는 알아서 적용이 된다는 장점이 있다. </li></ul><ul id="d78dbf0b-1387-45f4-aaf7-eb830161aaac" class="bulleted-list"><li style="list-style-type:circle">Duck Typing 가능</li></ul><p id="882db64d-c90c-421e-9be4-0253730dedf5" class=""> </p></li></ul><h2 id="396a8e39-7acf-4ab9-81f3-00e061bf4ef8" class="">(3) Python을 사용하는 이유</h2><ol type="1" id="f2c3969d-396a-471b-a511-0b3d3c45e5b4" class="numbered-list" start="1"><li><code>쉬운 문법</code>과 <code>다양한 기능</code>이 있기 때문에 <mark class="highlight-blue">높은 생산성</mark>으로 이루어질 수 있다. </li></ol><ol type="1" id="9a1571b6-49ab-49e3-9fd3-91c6405ee5d7" class="numbered-list" start="2"><li><code>라이브러리가 다양</code>하다.<ol type="a" id="c287d734-fa56-44e5-ad06-0c20738ef655" class="numbered-list" start="1"><li>라이브러리 설치와 관리가 쉽다. </li></ol><ol type="a" id="c7cd4517-aff9-4b34-bfd1-3a48199c001c" class="numbered-list" start="2"><li>오픈소스 : 수많은 사람들이 다양한 라이브러리에 기여를 하였고, 공개가 되었기 때문에 참고 가능하다.  </li></ol></li></ol><ol type="1" id="8383b27f-1e43-493a-a3c1-01c50843645d" class="numbered-list" start="3"><li>널리 쓰임<ol type="a" id="93b80171-230e-4a22-a1c2-284a6c6a4716" class="numbered-list" start="1"><li>인터넷에서 관련 문서 및 도움을 받기 유리해서 초보자도 사용이 가능하다.</li></ol><figure id="8ac8b564-bc44-4a71-a476-125e0f4baf9f" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled.png"><img style="width:1760px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled.png"/></a></figure></li></ol><ol type="1" id="fdf6c511-8e4d-408d-bce0-e77435f85376" class="numbered-list" start="4"><li>구글링으로 대부분의 문제를 해결할 수 있다. </li></ol><p id="437c0c06-2438-4f06-8bbe-e974ea51977f" class="">
+</p></div><h1 id="252c7eb4-6979-4c79-a4ea-bbd6af00f286" class=""><details open=""><summary>1️⃣ Python Environment (환경설정)</summary></details></h1><div class="indented"><h2 id="7f8e2a7e-17ba-4eaa-8871-0d199171ccd6" class="">(1) Origin of Python </h2><p id="d6c165be-0122-439f-b323-87a5fe6e27b0" class="">파이썬 개발 환경을 구축할때 고려해야할 점은 다음과 같다.<div class="indented"><ol type="1" id="a5e66db9-e1fa-4382-842a-49e3cfe56f03" class="numbered-list" start="1"><li>운영체제</li></ol><ol type="1" id="9c20848c-5198-4073-9cf0-2db083f2af87" class="numbered-list" start="2"><li>Python 인터프리터 (Python 2는 사용 금지, 3.8 이상을 권장)</li></ol><ol type="1" id="83e25344-60c7-482e-aceb-6c963e2d9819" class="numbered-list" start="3"><li>코드 편집기 (Editor, IDE)</li></ol><ol type="1" id="35accd9a-8b59-4643-9322-f698eea8b56f" class="numbered-list" start="4"><li>패키지 관리자</li></ol></div></p><h2 id="6864b339-a1d3-429e-b3e3-b25e597968ed" class="">(2) 운영체제</h2><ul id="289ddd06-727e-4cba-a9b0-a8440ca5cbfa" class="bulleted-list"><li style="list-style-type:disc">Window ❌: 친숙함, 워드와 한컴 사용 가능, 특정 라이브러리 설치가 어려움</li></ul><ul id="0bf80563-bea5-4df0-a6c0-da0f77a04688" class="bulleted-list"><li style="list-style-type:disc">Linux ⭕: 서버 호환이 쉬움, 라이브러리 설치가 용이하고 무료, 대부분의 사용자가 친숙하지 않은 편</li></ul><ul id="29c4c5f2-d77f-418e-9876-a26397375890" class="bulleted-list"><li style="list-style-type:disc">Mac 🔺: 서버 사용이 용이하지만 비쌈<p id="a9610dc7-aac8-4f03-829e-3a4ab2a9bd3b" class=""><mark class="highlight-blue_background"><strong> ➰ Window에서 Linux를 돌리는 방법</strong></mark><div class="indented"><p id="a53e778d-bb57-439a-b3db-20d1ee919739" class="">1) 가상 환경 사용 : VirtualBox</p><p id="20a80cdc-49c5-4b83-9aff-efa683fd1e2a" class="">2) WSL </p><p id="acbe2a0d-288c-4fb5-8d6d-3e1e72a0d4fa" class="">3) 클라우드 기반 서비스 사용 : Colab , Groomidle</p></div></p></li></ul><h2 id="a3523811-6456-4601-9924-3325f2336e46" class="">(3) Code Editor</h2><p id="a556f1dd-1159-45fc-aad3-9ad33c20fb5e" class="">Python code는 어떤것을 사용해도 상관이 없다. </p><p id="250ebe2f-2c5f-4d19-a29d-2b4d39986103" class="">VIM 과 ATOM은 code를 수정하고 자동완성하는데에는 도움이 되지만 디버깅은 어려울 수 있다.</p><p id="c53b6d6b-48a9-4fa2-9424-bc50f552e020" class="">👉🏻 <code>IDE (Integrated Developement Environment)</code> 을 주로 사용한다. <div class="indented"><p id="3ef34dc4-7500-45c2-83a2-373f28a02a43" class=""><mark class="highlight-gray">ex) Visual Studio Code, PyCharm </mark></p></div></p><p id="1acaf374-406f-40b3-a2c7-e826ac5cf572" class="">👉🏻 <code>Web-based IDE </code><div class="indented"><p id="acc98b06-b84f-462d-a360-006866fb794b" class="">웹브라우저로 코딩이 가능한 환경</p><p id="300e8d9f-d684-406c-a34b-aeff2a3204b7" class=""><mark class="highlight-gray">ex) Jupyter Notebook, Jupyter Lab, GroomIDE, </mark><strong><mark class="highlight-gray">Google Colab</mark></strong></p><p id="b7b1993d-af5d-4bb3-bd39-f66b59ae2646" class="">
+</p></div></p><h2 id="0a86f002-8f3d-43db-b727-334fda37f87d" class="">(4) Package &amp; Environment Manager</h2><p id="a470dbb1-7020-477f-932c-606aa9911159" class="">외부 라이브러리가 너무 많기 때문에, 이를 설치하고 <mark class="highlight-blue"><strong>관리하고 자동화할 수 있는 도구</strong></mark>가 필요하며, 이를 이용해서 <strong><mark class="highlight-blue">다양한 환경</mark></strong>(머신러닝, 파이썬 등등)간의 <mark class="highlight-blue"><strong>쉬운 전환</strong></mark>이 필요하다. (Environment Management)<div class="indented"><p id="bf74572b-9727-40b4-aa8d-c48fa4a4f692" class=""> ex) Java의 Maven, Node의 NPM, Linux의 APT</p></div></p><p id="57d5c57c-634e-4c6f-8b9f-f0f61835902a" class="">1) <code>PIP + Virtual enu</code> : Python 기본 패키지 관리 프로그램.<div class="indented"><p id="6fd1b0e3-1e20-4432-81e5-ad20844b6bc8" class="">⁕ PIP와 Python 버전이 같아야 한다. </p></div></p><p id="371a2c70-252a-4143-a7bc-2b7d20af7ace" class="">2) <strong><code>Anaconda3</code></strong> : 기계학습 및 수치해석 특화 패키지 관리 프로그램. <div class="indented"><p id="c6f07698-aaa3-4aad-93cc-1001f05561f5" class="">상용화된 프로그램이지만, 개인/교육용/5인 이하 사업장에서는 유료이다. </p></div></p><p id="0a3714e5-6495-48b5-8fda-880e05230a93" class="">
+</p><h2 id="c8bcb723-820b-4a0e-9c57-4d62a9807817" class="">(5) 추천환경과 자주 쓰이는 환경</h2><p id="e956591a-61d0-49a8-a3f8-ad8520f57994" class=""><div class="indented"><div id="e9684999-6fd9-4d7c-9cfd-1eedd8737f69" class="column-list"><div id="9a79a8ba-903a-4174-a413-60619246bd19" style="width:50%" class="column"><figure id="9e07fdc6-63df-40e6-a077-2aef3ec9d74a" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%201.png"><img style="width:1684px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%201.png"/></a></figure></div><div id="f1e5e614-e0d6-4d63-b638-6655b749b05d" style="width:50%" class="column"><figure id="4f677019-2a98-46b6-8255-60ce4426c327" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%202.png"><img style="width:1629px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%202.png"/></a></figure></div></div><p id="073c5302-825f-4b86-91a8-b12c0a387c88" class="">
+</p></div></p><h2 id="869d2241-60bc-4ddf-a8fe-7fde249c84a3" class="">(6) Jupyter Overview</h2><p id="99675131-387b-4569-bc66-a7c3a325adbd" class="">파이썬의 기본 실행 환경 : Interactive Shell</p><p id="808d08d1-9f4d-47ff-a0bb-f5b01819c8ae" class="">→ 일반적으로 .py 파일을 실행하지만, 파이썬의 interactive함을 사용하기 위하여 Jupyter 사용<div class="indented"><h3 id="edd268f9-429f-497c-9ff9-6afd5a82baa3" class="">Jupyter란?</h3><hr id="5b628673-15fe-4ed2-bd49-f2ab72a77e12"/></div></p><figure id="c0c23a5f-1565-4ed9-8b43-3d6b30c8d19d" class="image" style="text-align:center"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%203.png"><img style="width:432px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%203.png"/></a></figure><ul id="15b509f0-903a-44e5-bad2-d30952d3258e" class="bulleted-list"><li style="list-style-type:disc">Ipython 커널을 기반으로 한 Interactive 파이썬 셀 프로그래밍<ul id="4f15f974-8664-40ea-9167-cb13f7c578be" class="bulleted-list"><li style="list-style-type:circle">.ipynb 파일 확장자</li></ul><ul id="cdc021da-2cdf-4e08-986a-1aee7e7ed48f" class="bulleted-list"><li style="list-style-type:circle">jupyter라는 웹 기반  IDE을 기반으로 실행</li></ul><ul id="ff76c6d7-72c1-4490-b862-834f5a375072" class="bulleted-list"><li style="list-style-type:circle">VsCode 및 Pycharm, Colab에서 사용 가능 (Jupyter 코드가 자동으로 깔림)</li></ul></li></ul><ul id="c5462fb2-cd58-403f-a48c-f9f5d533f057" class="bulleted-list"><li style="list-style-type:disc">미디어, 코드, 수식 등을 하나의 문서 형태로 표현이 가능하다.</li></ul><ul id="8b3945c1-a87a-49f4-83b7-c81eebeb27c4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><strong>Colab 자체가 Jupyter 기반으로 동작</strong></mark>한다. </li></ul><ul id="f355ebf0-3367-4679-a81c-f2811d3527fd" class="bulleted-list"><li style="list-style-type:disc">VsVode Python 플러그인에 Jupyter Server가 내장되어 있다. </li></ul><h2 id="c9c92f6e-1287-4cea-870b-7a8b96670c8e" class="">(7) Jupter Cell</h2><p id="9cc459e7-275f-4ca0-bb13-150d4b420499" class="">1) <strong><mark class="highlight-blue">Code Cell</mark></strong> : 코드를 실행시키고 결과를 확인 (파이썬에 비해서 쉽게 그림 확인이 가능)</p><p id="3a931b61-a780-469a-8a41-2ca67c4ba735" class="">2) <mark class="highlight-blue"><strong>Markdown Cell</strong></mark> : Markdown/HTML 문법으로 문서화</p><figure id="694036cf-0d1e-44f0-b5ba-d38981750000" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%204.png"><img style="width:1336px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%204.png"/></a></figure></div><h1 id="6c1ccd9a-3b56-4377-911e-2e12d2493b19" class=""><details open=""><summary>2️⃣ Variable &amp; Operator (변수와 연산자)</summary></details></h1><div class="indented"><h2 id="edf5c5b3-2d4e-4f28-aef0-b1a8c68ab304" class="">(1) Variable (변수)</h2><ul id="120091bf-96ed-4589-9bc8-78bc9342436b" class="bulleted-list"><li style="list-style-type:disc">변수 : 값을 저장하는 공간 , 연산자로 대입 연산</li></ul><ul id="0bab91e6-7aa7-425b-84e9-043b0c86e735" class="bulleted-list"><li style="list-style-type:disc">Python 변수의 특징 <p id="ad2ef619-d5b9-49ee-86b7-c0ee208bf33b" class="">1) <mark class="highlight-blue"><strong>모든 변수는 메모리 주소</strong></mark>를 가르킨다. (모든 것은 포인터 이다.)</p><p id="cfa1823d-5f58-4ce5-9bb9-3d08e58671b0" class="">2) 변수 명 = 일종의 이름표<div class="indented"><p id="dbdaef50-6421-447f-851a-9a60b5437e50" class="">선언한 변수에 특정 공간이 생기는 개념이 아니라, <mark class="highlight-blue"><strong>필요하면 공간을 만들고</strong></mark> 변수명을 명명한다. </p><p id="2cd65e75-73ba-457e-af10-407d8b01ba30" class="">a라는 공간에 15를 담는 것이 아니라, 15라는 공간의 이름을 a로 정한다. </p><div id="23ede5dc-2c6c-4700-a07c-15927ee9831e" class="column-list"><div id="d79d69d1-0260-41a0-87a2-d4f80d113efe" style="width:50%" class="column"><pre id="164d33a4-cb16-4c2b-a02b-e50aadbfa6e4" class="code"><code>&gt;&gt;&gt; a=15
+&gt;&gt;&gt; b=4
+&gt;&gt;&gt; a+b
+19</code></pre></div><div id="327e7362-015b-434a-af26-4d336ffb0564" style="width:50%" class="column"><pre id="ded6f9bb-6103-47d3-a791-6ae59b21d206" class="code"><code>&gt;&gt;&gt; a=15
+&gt;&gt;&gt; b=a
+&gt;&gt;&gt; b
+15</code></pre></div></div><p id="a3c8da7b-e9f9-43f2-8208-8faec34435b5" class="">
+</p></div></p></li></ul><h2 id="8d092cd1-92a3-4ae9-b421-81d541f35062" class="">(2) 변수 선언 방법</h2><p id="502ff317-b824-4a21-8c5c-4f01a69b9384" class=""><strong>① </strong><strong><code>알파벳</code></strong><strong>, </strong><strong><code>숫자</code></strong><strong>,</strong><strong><code> 언더스코어(_)</code></strong><strong>로 변수를 선언한다</strong><div class="indented"><ul id="b68f4ca6-594f-4969-b107-094a2afd05bf" class="bulleted-list"><li style="list-style-type:disc">숫자로 변수명을 시작할수는 없다. </li></ul><ul id="962ac5e8-1b34-4512-ba85-6dbd6854b38c" class="bulleted-list"><li style="list-style-type:disc">ex) data =0, _al=2, _gg=’goroom’</li></ul></div></p><p id="ab3bdda4-023e-4e5a-8274-8a8474d4225f" class=""><strong>② 변수명은 그 변수의 특징이 잘 살아있도록 만들자. (</strong><strong><mark class="highlight-blue">가독성은 중요하다!</mark></strong><strong>)</strong></p><p id="e029ea3a-67d0-4f20-ada5-96b134928181" class=""><strong>③ 변수명은 </strong><strong><code>대소문자</code></strong><strong>가 구분된다.</strong> <div class="indented"><p id="251570a7-4f65-4f8c-8494-382a3992e142" class="">ex) abc와 ABC는 다르다.</p></div></p><p id="e66bdc7e-3d95-456f-9beb-9f1829ef1435" class=""><strong>④ 변수명으로 쓸 수 없는 </strong><strong><code>예외적인 예약어</code></strong><strong>가 존재한다.</strong><div class="indented"><p id="805e978d-126b-48c8-b8ea-14a641131104" class="">ex) for, if, else, True 등</p></div></p><p id="40338a1b-4f98-4883-9ed8-fe0f0760551c" class=""><strong>⑤ C언어와는 달리 대입 연산이 딱히 </strong><strong><mark class="highlight-blue">반환값을 가지는 것은 아니다</mark></strong><strong>. </strong></p><div id="8979cc2e-2425-4ac1-b372-fcc6777ffa57" class="column-list"><div id="857e40d1-b4e1-43f9-afee-242f849ab6b2" style="width:4.166666666666666%" class="column"><p id="3220359a-e22c-4c29-98d0-8412eab662eb" class="">
+</p></div><div id="81da60ea-401c-4a5f-bc35-f5360b9f773a" style="width:45.83333333333333%" class="column"><div><p id="cd09e517-f86e-464f-8bcf-ff92796e582c" class=""><span style="border-bottom:0.05em solid"><strong>ex) C언어</strong></span></p><p id="66df1b61-f74a-4d37-88fb-b7689941b34b" class=""><code>b=(a=10);</code></p><p id="43df862c-4aa6-4686-ac60-4dd19896d426" class="">→ a라는 값이 10이라는 반환값을 가지기 때문에 b에는 10이라는 값을 지닌다. </p></div></div><div id="fa2d6e93-1d6f-41b5-87e1-104d4b97ac57" style="width:49.99999999999999%" class="column"><div><p id="1ca9d95c-f5f7-4d3e-a82b-1097c9b161a1" class=""><span style="border-bottom:0.05em solid"><strong>ex) Python</strong></span></p><p id="0ceaf844-2361-41b9-8329-fa850547c84c" class=""><code>(a=2) == 2 </code>// <mark class="highlight-red">SyntaxError : invalid syntax</mark></p><p id="23ffd423-0bca-489b-839f-d70ae6ea7915" class="">a라는 값이 2 라는 반환값을 가지지 않기 때문에 오류가 발생한다. </p></div></div></div><p id="6b592ed8-e7bc-4de3-ab5e-80bf35852f66" class=""><strong>⑥ </strong><strong><mark class="highlight-blue">연속해서 대입이 가능</mark></strong><strong>하다. (뒤에서 부터 값이 대입된다.)</strong></p><div id="590b3ece-7b16-4658-8f65-a7ff8d69b0f0" class="column-list"><div id="b9063926-b421-48e2-a190-8f67c25f0277" style="width:4.166666666666666%" class="column"><p id="3efdc0ee-6477-4c28-8761-15404d8ba2a2" class="">
+</p></div><div id="49be6baf-003f-4f4e-b450-edbc1a173f93" style="width:49.99999999999999%" class="column"><div><p id="79d5151f-b655-423d-8226-e41f29957b6e" class=""><span style="border-bottom:0.05em solid"><strong>ex) C언어</strong></span> </p><p id="b1f27438-d580-4802-bf60-2e02f67f5c2d" class=""><code>a=b=c</code></p><p id="62c196ba-a374-4232-9654-e980e85dd4a5" class="">=<code>a=(b=c)</code></p><p id="d94aeb27-4366-4a15-9872-e2dd3c3d88ee" class="">: b의 값이 c로 반환되어 a는 결국 c라는 결과값을 지니게 된다.</p></div></div><div id="8e9b9c8d-cdcf-43f4-bdcb-ad121fa4a475" style="width:45.83333333333333%" class="column"><div><p id="94073879-a2c1-4f51-88e4-519ea5ca095e" class=""><span style="border-bottom:0.05em solid"><strong>ex) Python</strong></span> </p><p id="5b95c75e-8ce6-4cfb-a8b5-bf1a4d5cccb2" class=""><code>a=b=c</code></p><p id="39d61850-d6d5-4f28-95dc-f0112d341f18" class="">: 알아서 값이 입력이 되기 때문에, a와 b 모두에 c가 대입이 된다.</p></div><p id="56bda5d3-1281-4a40-b6c8-61a60dd4ff54" class="">
+</p></div></div><p id="b5eb3382-17d4-433b-a61f-b4f1a44d4ba4" class=""><strong>⑦ (Python 3.9  이상) </strong><strong><code>.=</code></strong><strong> 연산으로 대입과 동시에 반황이 가능하다.</strong><div class="indented"><p id="727199c8-3385-4264-9a72-51e2b3f7c980" class=""><code>(a:=2) ==2</code> // <mark class="highlight-teal">True</mark><div class="indented"><p id="4da56d76-9e33-43f4-8cfe-cd0b21c7ad56" class="">: a에 대한 반환값이 2가 되어서, 2==2의 연산이 진행된다.</p></div></p></div></p><p id="cc410b7a-a47e-4573-bfc5-0f50b016baca" class="">
+</p><h2 id="24b3fe81-12e2-4112-9638-3ea5213bdbe9" class="">(3) 원시 변수 타입 (Primitive Data Types)</h2><p id="13437ef4-c41b-4723-8d61-0219a531503c" class="">Python code는 어떤것을 사용해도 상관이 없다. </p><table id="9e90adde-48f9-4695-b9fc-f6804fe6f478" class="simple-table"><thead class="simple-table-header"><tr id="74143758-4fbf-492f-bc7d-ff8dc2a0e3c2"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>유형</strong></th><th id="fxT?" class="block-color-blue_background simple-table-header" style="width:75px">Code</th><th id="=tdT" class="block-color-blue_background simple-table-header" style="width:282px"><strong>비고</strong></th><th id="ms&gt;]" class="block-color-blue_background simple-table-header" style="width:192px"><strong>예시</strong></th></tr></thead><tbody><tr id="3d640a9e-b2db-4256-8022-574fd80efd90"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>정수(수치)</strong></th><td id="fxT?" class="" style="width:75px"><code>i</code></td><td id="=tdT" class="" style="width:282px">크기가 큰 숫자에도 Overflow가 발생하지 않음. 
+명시적인 Short type 등이 없음</td><td id="ms&gt;]" class="" style="width:192px">1 3 100 -50 
+1236784564567898
+(길이를 따로 지정하지는 않음)</td></tr><tr id="48b2d8a9-fb27-41a1-a7c8-ac0d1c56fcd2"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>실수(수치)</strong></th><td id="fxT?" class="" style="width:75px"><code>float</code></td><td id="=tdT" class="" style="width:282px">부동소수점, Double precision</td><td id="ms&gt;]" class="" style="width:192px">1.7 -5.7 3e5 .08 9. 4.67e-3</td></tr><tr id="46a64fe4-1272-4f95-83ad-dfd560ffe50e"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>복소수(수치)</strong></th><td id="fxT?" class="" style="width:75px"><code>complex</code></td><td id="=tdT" class="" style="width:282px">실수부와 허수부로 분리하여 표현
+허수부는 j또는 J로 표현</td><td id="ms&gt;]" class="" style="width:192px">1+8j 1.6+8j</td></tr><tr id="bbdec134-bfe8-4edb-9392-a6ee89b41f7d"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>문자열</strong></th><td id="fxT?" class="" style="width:75px"><code>string</code></td><td id="=tdT" class="" style="width:282px">따옴표로 표현, Unicode
+큰 따옴표(””), 작은 따옴표(’’) 차이X
+작은 따옴표 안 큰 따옴표, 큰 따옴표 안 작은 따옴표 표현 가능</td><td id="ms&gt;]" class="" style="width:192px">‘test’ ‘a’ “한글도 되요”</td></tr><tr id="df091f7b-215f-4cfc-9ff4-1cae27c198fd"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>논리</strong></th><td id="fxT?" class="" style="width:75px"><code>bool</code></td><td id="=tdT" class="" style="width:282px">참/거짓을 표현, True/Flase 값 밖에 없음</td><td id="ms&gt;]" class="" style="width:192px">True False</td></tr><tr id="64924191-f125-4c0e-8848-d2c1095d952a"><th id="A`YU" class="block-color-blue_background simple-table-header" style="width:110px"><strong>None</strong></th><td id="fxT?" class="" style="width:75px"><code>None</code></td><td id="=tdT" class="" style="width:282px">None 타입, 일종의 null, None 값 밖에 없다. </td><td id="ms&gt;]" class="" style="width:192px">None</td></tr></tbody></table><div id="31033681-0ae3-402c-9925-ef96956e0b29" class="column-list"><div id="cc278f2c-f437-4dea-a089-6a85d052c029" style="width:50%" class="column"><div><p id="0d225b9c-d72a-46bc-b8ec-eb78d832bd2e" class="">ex ① ) <code>a=15</code> # 정수<div class="indented"><pre id="e6542dbf-c06d-4d1f-bd4b-131fb9e65cd4" class="code"><code>&gt;&gt;&gt; a
+15</code></pre></div></p></div></div><div id="0afdb267-65e0-4784-8fc6-7960010eb86e" style="width:50%" class="column"><div><p id="b2a63285-bab8-4e27-93b6-482ae542ba61" class="">ex ② ) <code>b=3.2</code> # 실수<div class="indented"><pre id="7b9ed146-08e3-4335-87ba-e283798ed0f5" class="code"><code>&gt;&gt;&gt; b
+3.2</code></pre></div></p></div></div></div><div id="7ff30b9e-aeb9-4082-9b6f-19aacb73fd21" class="column-list"><div id="ae925e2d-a1fd-4884-9d65-a6344337eb1c" style="width:50%" class="column"><div><p id="4097fa93-dbff-42b0-9fb5-5b6513bd4a05" class="">ex ③ ) <code>c=1+5j</code> # 복소수<div class="indented"><pre id="b33b5780-ec60-439e-a1f6-df0580d998b3" class="code"><code>&gt;&gt;&gt; c
+(1+5j)</code></pre></div></p></div></div><div id="b2708ad5-915b-45d2-952f-40e0a31772b7" style="width:50%" class="column"><div><p id="12b9b681-fb53-4e82-a903-8ef414e3f423" class="">ex ④ ) d=”text” # 문자열<div class="indented"><pre id="11d47ee7-073d-4194-9236-09a05786fa59" class="code"><code>&gt;&gt;&gt; d
+‘text’</code></pre></div></p></div></div></div><div id="c41a85c2-48ef-48f9-9cfc-f1a8dcd343f0" class="column-list"><div id="9b5ea7b2-5492-429f-bf97-a5874129f4b4" style="width:50%" class="column"><div><p id="8e61a5a8-ee77-4f13-88e9-ccb9ea825d04" class="">ex ⑤ ) e=”True” # Boolean, <mark class="highlight-red_background">대소문자에 주의</mark><div class="indented"><pre id="407a70d7-f934-4e67-80b1-912d4bf0ec13" class="code"><code>&gt;&gt;&gt; e
+True</code></pre></div></p></div></div><div id="ac3ce8f1-bae4-4a57-8076-6e5c554dca46" style="width:50%" class="column"><div><p id="86172093-8e0b-49d1-a179-2227390c8df4" class="">ex ⑥ ) f=None # None, <mark class="highlight-red_background">대소문자에 주의</mark><div class="indented"><pre id="d44b8dd1-9be8-468e-9e4b-13965d1d80b9" class="code"><code>&gt;&gt;&gt; f #아무것도 출력하지 않음</code></pre></div></p></div><p id="55b4794f-08df-4361-a78f-97a8ecf59151" class="">
+</p></div></div><h2 id="efc953ed-b744-42a1-8343-680edd0d220a" class="">(4) 산술 연산자 (Arithmetic Operator)</h2><p id="3685979b-e0fb-4325-8c05-f9f8b37989c0" class=""><div class="indented"><div id="cbc8f507-cf7e-4c57-ac5d-697dd38b5c26" class="column-list"><div id="d4d38f70-897c-4e59-87c9-7ae811d7dc4f" style="width:45.83333333333333%" class="column"><table id="f8aeb2e0-90bc-4294-8bf2-2d7df57a37a7" class="simple-table"><thead class="simple-table-header"><tr id="0b6a36fd-4cdb-4f8a-91eb-cb01ccbc59c0"><th id="ORVF" class="block-color-blue_background simple-table-header"></th><th id="tVmU" class="block-color-blue_background simple-table-header"><strong>비고</strong></th></tr></thead><tbody><tr id="1a762cac-3c32-416e-851c-c6d61cd89660"><td id="ORVF" class=""><code>+</code></td><td id="tVmU" class="">덧셈</td></tr><tr id="edc7e0a5-5311-45d9-aeb6-3a8d9c2dad75"><td id="ORVF" class=""><code>-</code></td><td id="tVmU" class="">뺄셈</td></tr><tr id="2e0bf0cd-1eaf-4998-9a60-5bc47ceadbb1"><td id="ORVF" class=""><code>*</code></td><td id="tVmU" class="">곱셈</td></tr><tr id="726db83a-926e-4508-8b57-796d7a0505d2"><td id="ORVF" class=""><code>**</code></td><td id="tVmU" class="">거듭 제곱</td></tr><tr id="eb34b71e-b978-4c83-8633-63809f0608d9"><td id="ORVF" class=""><code>/</code></td><td id="tVmU" class="">나누기</td></tr><tr id="7acd6e27-d935-4f79-819d-4667abc635a1"><td id="ORVF" class=""><code>//</code></td><td id="tVmU" class="">나누기의 <strong>몫</strong></td></tr><tr id="2e4ff90a-ca00-4688-9617-6b51a72c6e10"><td id="ORVF" class=""><code>%</code></td><td id="tVmU" class="">나누기의 <strong>나머지</strong></td></tr></tbody></table></div><div id="b830fec4-2219-42c0-938e-ba0167f8a1b8" style="width:25%" class="column"><div><pre id="19c7f738-404d-42cf-9aab-b8b2bd507cc1" class="code"><code>&gt;&gt;&gt; 50+12
+62
+
+&gt;&gt;&gt; 30-46
+-16
+
+&gt;&gt;&gt;2*6
+12</code></pre></div><p id="ca291c85-aff7-46d2-b060-2567f42a0654" class="">
+</p></div><div id="1d96e2fd-6439-4eda-b758-67a27c26671b" style="width:29.166666666666668%" class="column"><div><pre id="08b2a228-ca99-4a8f-9f87-a0e435817403" class="code"><code>&gt;&gt;2**3
+8
+
+&gt;&gt;&gt; 1.7/0.8
+2.125
+
+&gt;&gt;&gt; 13//5
+2
+
+&gt;&gt;&gt; 13%5
+3</code></pre></div></div></div></div></p><h2 id="11a66cdd-0891-4afa-82b0-80859fec2f9f" class="">(5) Bit 연산자 </h2><div id="e6b69cb4-2baa-4199-8691-e301a960e5ab" class="column-list"><div id="730ce928-099c-4f2e-aa2f-532324c1cafd" style="width:41.666666666666664%" class="column"><table id="fc4bad13-657f-4c15-9a4a-4b91970478ae" class="simple-table"><thead class="simple-table-header"><tr id="00b19ad7-a853-46cd-afb2-b12b733b3124"><th id="ORVF" class="block-color-blue_background simple-table-header" style="width:94px">연산자</th><th id="tVmU" class="block-color-blue_background simple-table-header"><strong>비고</strong></th></tr></thead><tbody><tr id="b9f9fe62-9f2c-4633-a4fd-e2c0ec09de99"><td id="ORVF" class="" style="width:94px"><code>~</code></td><td id="tVmU" class="">비트 부정</td></tr><tr id="8169c51a-9f5f-4c82-8828-5429446a01e8"><td id="ORVF" class="" style="width:94px"><code>|</code></td><td id="tVmU" class="">비트 합</td></tr><tr id="c7cc5710-39c1-4e5f-9eb7-4e4c2d5c26df"><td id="ORVF" class="" style="width:94px"><code>&amp;</code></td><td id="tVmU" class="">비트 곱</td></tr><tr id="82a87f48-04c0-45a0-9ff3-3f440eb6fb16"><td id="ORVF" class="" style="width:94px"><code>^</code></td><td id="tVmU" class="">배타적 비트합</td></tr><tr id="6cda877d-d672-4af9-a464-6fcfeea3947c"><td id="ORVF" class="" style="width:94px"><code>&gt;&gt;</code> <code>&lt;&lt;</code></td><td id="tVmU" class="">비트 시프트</td></tr></tbody></table></div><div id="0adee310-12d0-46ef-98c5-29f55c6832e6" style="width:29.166666666666675%" class="column"><div><pre id="8052761b-8816-497d-bd03-859040418d17" class="code"><code>&gt;&gt;&gt; ~5 #0101
+#제일 처음의 값은 음/양을 나타냄
+-6 #1010 (-8+2)
+
+&gt;&gt;&gt; 2|3 #(010+011)
+-4#011</code></pre></div></div><div id="cbc347c8-ffba-435e-a7ab-7b635ce698db" style="width:29.166666666666664%" class="column"><div><pre id="002eab03-6215-4bb3-a933-be1e8b6c1f9d" class="code"><code>&gt;&gt;&gt;2&amp;3 #(010&amp;011)
+2 # (010)
+
+&gt;&gt;&gt;2^3 #(010&amp;011)
+1 # (001)
+* 비트 시프트는 비트의 자리수를 양옆으로 이동하는 것</code></pre></div></div></div><p id="9d96c29b-2429-4152-8431-ba746112d995" class="">
+</p><h2 id="caa9adc6-b79c-44b2-bdde-1697168f09a1" class="">(6) 산술 연산자와 비트연산자의 특징</h2><p id="d6ffabab-a450-461f-b7e2-47c301c76b2f" class="">① 산술 연산자와 비스 연잔자는 대입 연산자와 함께 축약 가능<div class="indented"><ul id="83db0ba2-3f86-4d80-a122-5402f79be12d" class="bulleted-list"><li style="list-style-type:disc">단, <code>a+=1</code>는 in-place 연산이고 <code>a=a+1</code>은 Out-place 연산이다. </li></ul><ul id="803857d2-3786-4bb5-9625-44632a4406a0" class="bulleted-list"><li style="list-style-type:disc">Out-place : 명시적으로 새로운 객체 생성</li></ul><ul id="a318d7ac-d970-4cf4-b821-c84d6bb88479" class="bulleted-list"><li style="list-style-type:disc">In-place 연산 : 기존 객체를 수정 시도하고, 불가능 할 시에 새로운 객체를 생성한다. <figure id="9f6529a2-b7c1-42e2-90f8-69e22c259671" class="image" style="text-align:center"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%205.png"><img style="width:480px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%205.png"/></a></figure></li></ul></div></p><p id="e1327ff1-f1dc-4ebc-8c8c-854e2b52daef" class="">② a++연산은 파이썬에 존재하지 않는다.<div class="indented"><p id="60831cd7-1d2c-44fc-b1f0-d8e4e38e1a51" class="">a+=를 다른 플랫폼에서는 a++로 줄이기도 하기 때문에 유의할 것!</p><p id="7f6558cb-9e24-41db-9b24-c6c76c72b01d" class="">
+</p></div></p><h2 id="8c15ccd0-642a-4db8-ad05-f6304fddca41" class="">(7) 비교 연산자 (Condition Operators)</h2><table id="0e5e89d8-196a-4817-8886-717cec5825b5" class="simple-table"><thead class="simple-table-header"><tr id="51859960-2756-4283-8834-21a1d996f21a"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><strong>비교 연산자</strong></th><th id="cUZP" class="block-color-blue_background simple-table-header" style="width:158px">비교상태</th><th id="sY]K" class="block-color-blue_background simple-table-header" style="width:303.1875px">설명</th></tr></thead><tbody><tr id="8ddca452-0ebd-43fd-a077-66ab9c90df8c"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x&lt;y</code></th><td id="cUZP" class="" style="width:158px">~보다 작음</td><td id="sY]K" class="" style="width:303.1875px">x가 y보다 작다</td></tr><tr id="03487120-4973-47a8-90c5-3b131a758c36"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x&gt;y</code></th><td id="cUZP" class="" style="width:158px">~보다 큼</td><td id="sY]K" class="" style="width:303.1875px">x가 y보다 크다.</td></tr><tr id="8bfa47ef-0716-4841-bdc1-ae0e412cd903"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x==y</code></th><td id="cUZP" class="" style="width:158px">같음</td><td id="sY]K" class="" style="width:303.1875px">x와 y의 값이 같다.</td></tr><tr id="f811c3d3-ac1a-44ee-a994-c172f4ed634c"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x is y</code></th><td id="cUZP" class="" style="width:158px">같음</td><td id="sY]K" class="" style="width:303.1875px">x와 y의 주소가 같다.
+(*주소 : physical memory의 위치)</td></tr><tr id="cc1b99ab-fda5-4613-9479-1da1ed5ef86e"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x!=y</code></th><td id="cUZP" class="" style="width:158px">같지 않음</td><td id="sY]K" class="" style="width:303.1875px">x와 y가 값이 다르다.</td></tr><tr id="23864b5d-dcbd-422a-bb39-07d5f01fd762"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x is not y</code></th><td id="cUZP" class="" style="width:158px">같지 않음</td><td id="sY]K" class="" style="width:303.1875px">x와 y가 주소가 다르다.</td></tr><tr id="1a134d07-3dd2-4a79-aaad-4d4ec6ce9734"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x&gt;=y</code></th><td id="cUZP" class="" style="width:158px">크거나 같음</td><td id="sY]K" class="" style="width:303.1875px">x가 y 이상이다.</td></tr><tr id="9b2e4bed-7d51-46b8-bb70-316f66d19c8d"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x&lt;=y</code></th><td id="cUZP" class="" style="width:158px">작거나 같음</td><td id="sY]K" class="" style="width:303.1875px">x가 y 이하이다.</td></tr><tr id="7c3467bf-c3b2-4aba-8b9f-14a09fe8cecb"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x in X</code></th><td id="cUZP" class="" style="width:158px">포함</td><td id="sY]K" class="" style="width:303.1875px">x가 X에 포함된다. 
+1 in [1,2,3]</td></tr><tr id="95fade27-a51f-4952-8d6e-3c2247d482a3"><th id="SA&lt;I" class="block-color-blue_background simple-table-header" style="width:157px"><code>x not in X</code></th><td id="cUZP" class="" style="width:158px">포함하지 않음</td><td id="sY]K" class="" style="width:303.1875px">x가 X에 포함되지 않는다.
+1 not in [2,4,5]</td></tr></tbody></table><div id="88969c95-27f7-4cd0-9cec-92b40d191004" class="column-list"><div id="f7429575-809f-4546-9b15-21f1df82d880" style="width:50%" class="column"><ul id="0865498c-a6db-4749-a169-0ccc5bc73bb2" class="bulleted-list"><li style="list-style-type:disc">bool 끼리 연산을 위해서 논리 연산자를 활용한다.<ul id="2da0307c-4b18-473f-8b20-db8517fe9d3d" class="bulleted-list"><li style="list-style-type:circle">Bit 연산자와는 다르다!</li></ul><ul id="5fd2c0f6-3316-4ce9-83be-0dafdcc45bc5" class="bulleted-list"><li style="list-style-type:circle">Python에서의 비교연산은 한번에 평가된다. </li></ul><p id="05c206fd-6293-4317-a892-627d62fa99dd" class=""><mark class="highlight-gray">ex) (1&lt;2&lt;3)==(1&lt;2 and 2&lt;3), a==4&gt;3</mark></p><table id="4d0c6c83-433a-46c7-8cb9-b9bbb0af7b37" class="simple-table"><thead class="simple-table-header"><tr id="5b2b1f57-d659-4b37-af3b-8dd484074956"><th id="xpK]" class="block-color-blue_background simple-table-header"><strong>연산자</strong></th><th id="IRSb" class="block-color-blue_background simple-table-header" style="width:131px"><strong>비고</strong></th></tr></thead><tbody><tr id="87a7bcdc-322d-4d55-a0b5-c2b69526d337"><td id="xpK]" class=""><code>not</code></td><td id="IRSb" class="" style="width:131px">부정 (T↔F)</td></tr><tr id="c588e61b-5a15-4baf-ada7-0ce1e57d90de"><td id="xpK]" class=""><code>or</code></td><td id="IRSb" class="" style="width:131px">논리합</td></tr><tr id="044ad935-c107-4413-81cf-b355f499acc6"><td id="xpK]" class=""><code>and</code></td><td id="IRSb" class="" style="width:131px">논리곱</td></tr></tbody></table></li></ul></div><div id="5c681ebf-cc91-483f-bc9a-c89cc5b91593" style="width:50%" class="column"><pre id="a96a6ffd-de44-467d-ac5a-0bec38853f83" class="code"><code>&gt;&gt;&gt; a=3
+&gt;&gt;&gt; a&lt;4
+True
+&gt;&gt;&gt; a&gt;2
+True
+&gt;&gt;&gt; 2&lt;a and a&lt;4 #비교연산 한번에!
+True
+&gt;&gt;&gt; 2&lt;a&lt;4
+True
+&gt;&gt;&gt; not a&gt;3
+True</code></pre></div></div><h2 id="707b52bb-d7e5-4628-a981-f1054dc4249a" class="">(8) 연산자 우선순위 (Operator Priority)</h2><table id="af26272e-2ac2-4026-b71d-3e1cab48fe03" class="simple-table"><thead class="simple-table-header"><tr id="5f94d815-0e4c-4fc6-a3fb-6007f384efce"><th id="FTqA" class="block-color-blue_background simple-table-header" style="width:181.125px"><strong>연산자</strong></th><th id="jZrP" class="block-color-blue_background simple-table-header" style="width:386px"><strong>설명</strong></th></tr></thead><tbody><tr id="0f9fac7e-a181-4333-bd15-260e9c7ece46"><td id="FTqA" class="" style="width:181.125px">(…) […] {…}</td><td id="jZrP" class="" style="width:386px">괄호, list, dictionary 생성</td></tr><tr id="87561dd3-6989-4ca0-ae17-e6396fa883be"><td id="FTqA" class="" style="width:181.125px">x[…] x(…) x.attr</td><td id="jZrP" class="" style="width:386px">인덱싱, 함수 호출, 속성 참조</td></tr><tr id="84bbeabc-c8f4-495d-a9d7-82511b48ce92"><td id="FTqA" class="" style="width:181.125px">**</td><td id="jZrP" class="" style="width:386px">거듭제곱</td></tr><tr id="722542e8-e72c-4efd-b8d2-58e6ebfcd7cb"><td id="FTqA" class="" style="width:181.125px">+x -x ~x</td><td id="jZrP" class="" style="width:386px">단항 연산자</td></tr><tr id="8684d20c-a82b-46b9-89d2-5501b30d65ea"><td id="FTqA" class="" style="width:181.125px">* / // &amp;</td><td id="jZrP" class="" style="width:386px">곱셈, 나눗셈등</td></tr><tr id="e722eb26-128e-4b1b-b421-0076e5d6ceae"><td id="FTqA" class="" style="width:181.125px">+ -</td><td id="jZrP" class="" style="width:386px">덧셈, 뺄셈</td></tr><tr id="34e1a383-8d0c-4ed1-9264-48889aeaa8de"><td id="FTqA" class="" style="width:181.125px">&lt;&lt; &gt;&gt;</td><td id="jZrP" class="" style="width:386px">비트 시프트</td></tr><tr id="a707cdeb-9d62-4fbd-a252-4e4b0ad6e091"><td id="FTqA" class="" style="width:181.125px">&amp;</td><td id="jZrP" class="" style="width:386px">비트곱</td></tr><tr id="7c2425c4-c166-48f7-9777-5db6440869ff"><td id="FTqA" class="" style="width:181.125px">^</td><td id="jZrP" class="" style="width:386px">배타적 비트합</td></tr><tr id="316cd8d7-edba-4245-b967-ccdaaa324cc2"><td id="FTqA" class="" style="width:181.125px">|</td><td id="jZrP" class="" style="width:386px">비트합</td></tr><tr id="cf4ce456-cec9-451f-b36d-fb204d5af27a"><td id="FTqA" class="" style="width:181.125px">in notin is isnot
+&lt; &lt;= &gt; &gt;= == !=</td><td id="jZrP" class="" style="width:386px">포함 &amp; 비교 연산자</td></tr><tr id="b53781e0-9e0b-4c8d-9cd7-e18a44e1eb19"><td id="FTqA" class="" style="width:181.125px">not x</td><td id="jZrP" class="" style="width:386px">논리 부정</td></tr><tr id="c47ca622-827c-4613-a98e-ac8e33cfb76e"><td id="FTqA" class="" style="width:181.125px">and</td><td id="jZrP" class="" style="width:386px">논리 곱</td></tr><tr id="efbc060a-95fc-435e-a11a-c7e8b36d9a10"><td id="FTqA" class="" style="width:181.125px">or</td><td id="jZrP" class="" style="width:386px">논리 합</td></tr><tr id="5402619e-57c2-4b28-9a3d-bacb0a17cee9"><td id="FTqA" class="" style="width:181.125px">[x] if [condition] else [y]</td><td id="jZrP" class="" style="width:386px">삼항 연산자 (추후 설명)</td></tr></tbody></table><h2 id="8c492b4f-d09d-4c53-9654-687d69d73c0e" class="">(9) 원시 자료형(<a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662.html">Primitive Data Types</a>)의 특징</h2><p id="9b2f7453-c20e-4cb8-8a43-c06a3b079141" class="">① 문자열 (str) 타입은 작은 따옴표(’’) 혹은 큰 따옴표(””)로 정의된다.<div class="indented"><p id="74ab8c11-3f05-433a-82c5-573360ae8d0c" class="">ex) sentence=”hello”, sentence=’python’</p><p id="185eac2f-0746-4e3d-bb7f-a80c9968bae9" class="">기능상의 차이는 없지만, 한쪽을 쓰면 다른쪽에 Text를 넣을 수 있다.</p><pre id="7975ad0f-4b67-43df-a60b-0f9252c96a85" class="code"><code>&gt;&gt;&gt;sentence = &#x27;hello &quot;python&quot;&#x27;
+&gt;&gt;&gt;sentence
+&#x27;hello &quot;python&quot;&#x27;</code></pre></div></p><p id="222030df-1690-494b-8c3c-6edbe49fe203" class="">②<strong> 원시자료형(Primitive Data Type)들은 </strong><code><strong>불변 타입(Immutable Type)</strong></code><strong>이다.</strong> <div class="indented"><ul id="74657e2f-fdeb-4f8c-b775-df3b0c673eb1" class="bulleted-list"><li style="list-style-type:disc">파이썬의 모든 것들은 객체이기 때문에 원시자교형들은 역시 객체이다.</li></ul><ul id="76b6195f-40cd-4fe7-8d75-86aa223a9c12" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>하지만 불볍 타입들은 저장된 값이 변하지 않는다.</strong></mark></li></ul><ul id="3b698846-665e-484b-a681-869f1d36f81e" class="bulleted-list"><li style="list-style-type:disc">모든 타입은 물리적 메모리 주소를 가르친다.</li></ul><ul id="959cebc3-c61d-4364-a329-a5e0a5d42110" class="bulleted-list"><li style="list-style-type:disc"> 원시자료형과 Tuple을 제외한 다른 거의 대부분의 파이썬 객체는 <code>가변타입(Mutable Type)</code></li></ul></div></p><p id="4b00ce09-6467-4e12-8411-a782bee96cb4" class="">③ 파이썬에서 대입은 원칙적으로 메모리의 주소 복사<div class="indented"><p id="6328b76c-6ea0-4c2d-8ee9-e64394743131" class="">(즉, <mark class="highlight-red">값을 복사하는 것이 아니라 같은 주소를 공유하는 것</mark>)</p><ul id="6db25e11-736e-4f61-a551-860ee1f567ae" class="bulleted-list"><li style="list-style-type:disc">불변형의 경우 수정이 필요한 경우에 새로운 객체를 생성한다. </li></ul><pre id="04f2e2b5-510f-4f99-bc60-1d8c2eda745e" class="code"><code>&gt;&gt;&gt;a=10 #int는 불변타입
+&gt;&gt;&gt;b=a #a와 b는 같은 메모리 주소를 가르킨다.
+&gt;&gt;&gt;a+=1 #a는 불편 타입이라 값을 바꿀 수는 없고, 객체를 새로 생성하여 할당(outplace)
+&gt;&gt;&gt;a,b,a is b #a가 새로 할당되었기 떄문에 a is not b
+(11,10,False)
+
+&gt;&gt;&gt;a=[1,2,3] #List는 가변타입
+&gt;&gt;&gt;b=a #a와 b는 같은 메모리 주소를 가르틴다.
+&gt;&gt;&gt;a+=[4] # a는 가변 타입이기 떄문에 원 객체를 수정한다.
+&gt;&gt;&gt;a,b,a is b #a의 메모리 주소는 변함이 없이 때문에 a is b
+([1,2,3,4], [1,2,3,4], True)
+
+&gt;&gt;&gt;a=a+[5] #명시적 outplace. a에 [5]를 추가한 객체를 생성하여 a에 할당
+&gt;&gt;&gt;a,b, a is b #a가 새로 할당되었기 때문에 a is not b
+([1,2,3,4,5], [1,2,3,4], False)</code></pre><ul id="8efc295f-b6cc-453f-a5dd-894d4fd6827e" class="bulleted-list"><li style="list-style-type:disc"><code>a+=1</code> : inplace, <code>a=a+1</code> : outplace</li></ul></div></p><p id="91390822-bbdb-492e-8e04-51a8aeef7010" class="">④ 파이썬에서 적당한 크기의 원시 자료형 대입은 <mark class="highlight-red"><strong>기존 객체</strong></mark>를 할당 (불변 타입이라 상관없음)<div class="indented"><pre id="f8e94974-354e-4735-a5a5-5bfa1b60c368" class="code"><code>&gt;&gt;&gt;a=1 #int는 원시자료형
+&gt;&gt;&gt;b=1 #b에 새로 할당한것 처럼 보이지만 기존 객체를 가져온 것
+&gt;&gt;&gt;a is b #a와 b는 같은 메모리 주소를 가짐
+True
+
+&gt;&gt;&gt;a=13453436 #int은 원시자료형이지만 복잡한 값을 가짐
+&gt;&gt;&gt;b=13453436 #b에 값을 새로 할당
+&gt;&gt;&gt;a is b #a와 b는 같은 메모리 주소를 가지지 못함
+False
+
+&gt;&gt;&gt;a=&#x27;Text&#x27; #bool은 원시자료형, 짧은 텍스트
+&gt;&gt;&gt;b=&#x27;long=long-text&#x27; #bool은 원시자료형, 긴 텍스트
+&gt;&gt;&gt;a is &#x27;Text&#x27;, a==&#x27;Text&#x27;, b is &#x27;long=long-text&#x27;, b==&#x27;long=long-text&#x27;
+(True, True, False, True) # 문자열을 비교할때는 항상 ==
+
+&gt;&gt;&gt; a=True #bool은 원시자료형, True/False모두 간단함
+&gt;&gt;&gt; a is True
+True
+
+&gt;&gt;&gt; a=None # None type은 원시자료형 &amp; None 값만 존재한다.
+&gt;&gt;&gt; a is None
+None # 변수에서 None을 비교할때는 항상 is</code></pre></div></p><p id="d1aa3cf7-8960-433b-aa5e-902ecc2339d6" class="">
+</p><h2 id="591a7fda-d1ff-4e02-9fdd-f0a0131e5440" class="">(8) 동적 타이핑(Dynamic Typing)</h2><p id="2fdde772-2d12-44fe-8a5f-89bcab1bc579" class="">Python은 코드 (명시를 해주지 않아도) 실행 지점에서 데이터의 타입을 결정한다.</p><figure id="4e93889d-431e-495b-8ced-0dcc9f2ba0d4" class="image" style="text-align:center"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%206.png"><img style="width:576px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%206.png"/></a></figure><p id="637e2dd3-b999-4b7f-8387-1b8f6f95cfd3" class="">
+</p><h2 id="e0b94637-d488-4228-8da9-e4a685160d73" class="">(9) Implicit Type Conversion (불명시적 타입 변환)</h2><div><p id="bd9056ff-2da1-4212-922a-0bfc6dc20287" class="">① <mark class="highlight-red_background"><strong>int 간의 나누기 → float (정수 나누기는 //)</strong></mark></p><pre id="d55d852e-2ac2-4c66-aa3d-6936d5551eb9" class="code"><code>&gt;&gt;&gt;4/3
+1.33333333333333
+&gt;&gt;&gt;4//3
+1 </code></pre></div><div id="3139f623-fc35-404d-b335-f793486ab45b" class="column-list"><div id="862a8312-af84-4a7a-804e-16869e0d411b" style="width:50%" class="column"><div><p id="ed3fdfbc-711b-4571-b632-21a205866237" class="">② 자료형 변환 : bool→int→float→complex</p><pre id="58a14fdf-f202-4de8-8b2c-d9a5b1433b3d" class="code"><code>&gt;&gt;&gt;a=True #따로 int 값을 명시를 하지 않는 경우에는 default로 1의 값을 지님
+&gt;&gt;&gt;a=a+2
+&gt;&gt;&gt;a
+3
+
+&gt;&gt;&gt;a=a+1.5 # int형+float형 이지만 암시적으로 알아서 자료형을 바꾼다.
+&gt;&gt;&gt;a
+4.5
+
+&gt;&gt;&gt;a=a+7.1j
+&gt;&gt;&gt;a
+(4.5+7.1j)</code></pre></div></div><div id="a1e116ca-a31a-4492-94fc-1a19e5b42b62" style="width:50%" class="column"><div><p id="ce12ac98-cad2-4269-8788-de92dd73dbac" class="">③ None 타입과, str 타입은 별개</p><pre id="3e1e4c15-0569-4fed-a105-02c17f840c30" class="code"><code>&gt;&gt;&gt;a=1
+&gt;&gt;&gt;a+None #None은 아무것도 의미하지 않기 때문에 오류
+Trackback (most recent call last) :
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module?
+TypeError: unsupported operand type(s)
+
+&gt;&gt;&gt;a+&#x27;text&#x27; #
+Trackback (most recent call last) :
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module?
+TypeError: unsupported operand type(s)</code></pre></div></div></div><h2 id="4e519ed6-11a0-4891-9a92-89545b256079" class="">(10) Explicit Type Conversion (명시적 타입 변환)</h2><div id="753e1269-08a6-42e5-aeca-8a854cc966d5" class="column-list"><div id="8cea56e6-f638-4154-aaf2-db6e5f7f37b4" style="width:56.25%" class="column"><p id="f66cc9a8-4042-48ac-a602-7b648f0eb53b" class="">① [Type]([value])로 명시적 형 변환 가능<div class="indented"><div><p id="3e3ff5fe-061c-429e-acf0-8314d5724bad" class="">ex) int(a), float(text), str(value)</p><pre id="3a4a49eb-7816-4537-a062-e3386103b8ca" class="code"><code>&gt;&gt;&gt;a=12345
+12345
+
+&gt;&gt;&gt;float(a)
+12345.0
+
+&gt;&gt;&gt;complex(a)
+(12345+0j)
+
+&gt;&gt;&gt;str(a)
+&#x27;12345&#x27;
+
+&gt;&gt;&gt;bool(a) #a안에 어떤 값이든 있다면 True
+True</code></pre></div><p id="97f7e451-2406-45b8-b84d-d6f4bcf2ee05" class="">
+</p></div></p></div><div id="561b3d94-a672-46e3-8f9f-2cd8964aa95d" style="width:43.75%" class="column"><div><p id="df8fb4d9-5a3c-47f9-9e11-8713ca12908e" class="">② 실수→정수 : (<mark class="highlight-red_background"><strong>0으로 가까워지는</strong></mark>) 소수점 내림<div class="indented"><p id="0b57cdba-5845-4c90-a4c1-6f7a24dafbca" class="">반올림의 경우 <code>round</code> 내장 함수 사용</p><pre id="68f8cf68-3ee0-4efd-a976-8f38e00a3a2a" class="code"><code>&gt;&gt;&gt;int(75.75)
+75
+
+&gt;&gt;&gt;int(-163.3)
+-163
+
+&gt;&gt;&gt;str(75.75)
+&#x27;75.75&#x27;
+
+&gt;&gt;&gt;int(True)
+1
+
+&gt;&gt;&gt;int(False)
+0
+
+&gt;&gt;&gt;bool(None)
+False</code></pre></div></p></div></div></div><div><p id="9942ed33-7e72-4f22-a285-62c6a50b621e" class="">③ 적절한 text는 적절한 값으로 변형</p><p id="1ae0c162-ea59-4eba-b46e-496ea1d2f1ed" class="">④ <mark class="highlight-red_background"><strong>빈문자열, 0, None은 False로 변환</strong></mark><div class="indented"><pre id="350468d9-1243-49a3-b118-ce208a773919" class="code"><code>&gt;&gt;&gt;float(&#x27;75.75&#x27;) #문자열을 숫자로 변환
+75.75
+
+&gt;&gt;&gt;bool(&#x27;False&#x27;) #False라는 값이 담긴 String
+True
+
+&gt;&gt;&gt;bool(&#x27;&#x27;)
+False</code></pre><p id="26207cab-9a6a-493c-8912-d15c8c7dac4b" class="">
+</p></div></p></div><h2 id="dde29cef-86fd-454f-8117-e4b8e8e5ad32" class="">(11) Type Checking</h2><div id="c8b1e5dc-a9a6-4f8e-9ae3-214a911e28f3" class="column-list"><div id="9f3a1e48-c256-44d3-a0a2-32749f284603" style="width:31.25%" class="column"><pre id="05b8f937-42cd-4e73-ab6d-77c9ff74aac1" class="code"><code>&gt;&gt;&gt;a=123
+&gt;&gt;&gt;b=12.3
+&gt;&gt;&gt;c=&#x27;12.3&#x27;
+
+&gt;&gt;&gt;type(a)
+&lt;class &#x27;int&#x27;&gt;
+&gt;&gt;&gt;type(b)
+&lt;class &#x27;float&#x27;&gt;
+&gt;&gt;&gt;type(c)
+&lt;class &#x27;str&#x27;&gt;</code></pre></div><div id="8c663f54-955c-437f-afac-1bd95fc5f3de" style="width:68.75%" class="column"><div><ul id="0f3de214-8473-44d1-adbf-1ec4d94d2622" class="bulleted-list"><li style="list-style-type:disc"><code>type</code> 함수로 변수의 타입 확인 가능</li></ul><ul id="41b0e608-5015-4669-a204-c10ee20c85e1" class="bulleted-list"><li style="list-style-type:disc"><code>isinstance</code> 함수로 지정 타입인지 확인<p id="6b96ba9b-8beb-4bc6-9105-2920f52c4352" class="">ex) isinstance([variable],[type])</p><pre id="524d9264-f731-4803-bd25-623889b44835" class="code"><code>&gt;&gt;&gt;isinstance(a,float)
+False
+&gt;&gt;&gt;isinstance(b,float)
+True
+&gt;&gt;&gt;isinstance(c,str)
+True</code></pre><p id="0c325670-8f15-452b-9c99-27777dfbc358" class="">
+</p></li></ul></div></div></div><p id="d2edf474-b599-428c-a044-9e31ff3dedbd" class="">
+</p></div><h1 id="12b28173-7c45-4fbe-8c13-e5555dc84e01" class=""><details open=""><summary>3️⃣ Data Structure</summary></details></h1><div class="indented"><h2 id="74411a5a-a6a7-485f-9c48-e71150df2fd5" class="">(1) List</h2><ul id="6988d021-b411-44b6-986b-025d7ab929ca" class="bulleted-list"><li style="list-style-type:disc">배열 : 일련의 데이터를 하나로 묶음</li></ul><figure id="0b822568-4f04-460f-948d-ff2853268983" class="image" style="text-align:center"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%207.png"><img style="width:528px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%207.png"/></a></figure><ul id="cc15aa92-6737-4769-89a6-c2e4e6ce6249" class="bulleted-list"><li style="list-style-type:disc">파이썬 배열의 특징 : <ul id="d928df77-dcd6-444c-80ca-44268b560852" class="bulleted-list"><li style="list-style-type:circle">대괄호로 선언 “[value 1, value 2, ….]”</li></ul><ul id="b725aa83-a967-4bf6-9f74-5048a260a8d8" class="bulleted-list"><li style="list-style-type:circle">아무 타입이나 넣기 가능</li></ul><ul id="3b549305-c58d-49ba-ab4c-6fa638ba3dc3" class="bulleted-list"><li style="list-style-type:circle">길이가 정해져 있지 않음</li></ul><pre id="808f5435-7318-416d-8a63-65414e8977af" class="code"><code>&gt;&gt;&gt;seq=[12345, 101, &quot;Text&quot;, None, True]
+&gt;&gt;&gt;seq
+[12345, 101, &quot;Text&quot;, None, True]</code></pre></li></ul><p id="d55db0fa-59bb-4fdf-9d8e-ec5d467dd515" class="">
+</p><h2 id="d9c14f36-d6d8-40b8-952d-49f450aac233" class="">(1)-1 List Index &amp; Slicing</h2><div id="fa102c59-8316-446b-b5a5-1880b31538d3" class="column-list"><div id="5dc3e076-61f2-448c-9cf8-5f6bc92f18ba" style="width:50%" class="column"><div><h3 id="25a5acc9-5883-4a78-982e-458fddef39cd" class=""><strong>① List indexing </strong></h3><ul id="94ab1114-90dc-4fb7-84f2-1f7c07d9671f" class="bulleted-list"><li style="list-style-type:disc">seq[index] 형태로 요소 하나 접근</li></ul><ul id="d851bc72-4c0d-4b8c-81f7-7e494a1e081a" class="bulleted-list"><li style="list-style-type:disc">0부터 숫자세기 시작</li></ul><ul id="492a0017-9f70-4d8e-9e6a-71fe05dde390" class="bulleted-list"><li style="list-style-type:disc">음수 가능 (뒤에서 부터 접근)</li></ul><pre id="25aa3686-8fa1-4af3-9dea-fdc7dce18b9c" class="code"><code>&gt;&gt;&gt; seq=[1,2,3,4,5,6,7,8,9,10]
+&gt;&gt;&gt; seq[0] # 첫번째 요소
+1
+&gt;&gt;&gt; seq[8]
+9
+&gt;&gt;&gt; seq[-1] # 뒤에서 첫번째 요소
+10
+&gt;&gt;&gt; seq[-3]
+8</code></pre></div><p id="bed78b78-3c85-457a-8100-6b8bf223bb90" class="">
+</p></div><div id="ee55e6b7-f421-4da8-a3d9-3914ed7d24b4" style="width:50%" class="column"><div><h3 id="5d5588b9-96f8-41b5-a204-dd13901c90ea" class=""><strong>② List Slicing</strong></h3><ul id="22bcd5e6-0081-49b4-a887-1b57c0948877" class="bulleted-list"><li style="list-style-type:disc">seq[start: end: step] 형태로 List 자르기</li></ul><ul id="b372d091-5f0e-4e3d-a982-64b0aec07887" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>end번째는 포함하지 않음</strong></mark>(0부터 시작이기 떄문에.)</li></ul><pre id="88bfe369-1b99-4ec4-93bc-da5b1e2c67e1" class="code"><code>&gt;&gt;&gt; seq[:3] # 앞 3번째 전까지
+[1,2,3]
+&gt;&gt;&gt; seq[3:] # 앞 3번째 부터
+[3,4,5,6,7,8,9,10]
+
+&gt;&gt;&gt; seq[3:-1] # 앞 3번째 부터 뒤에서 첫번째 1번째 미만까지
+[4,5,6,7,8,9]
+&gt;&gt;&gt; seq[-3:-1]
+[8,9]
+
+&gt;&gt;&gt; seq[::2] # 두칸씩 뛰면서
+[1,3,5,7,9]
+&gt;&gt;&gt; seq[9:2:-1] #한칸씩 앞으로 가면서
+[10,9,8,7,6,5,4]
+&gt;&gt;&gt; seq[-2:2:-1]
+[9,8,7,6,5,4]</code></pre></div></div></div><h2 id="6cd5408c-0ea9-4d78-a10d-d69f619b2f7f" class="">(1)-2 List Operators(연산자)</h2><pre id="4f6a8177-ff7c-4004-97ef-09907c642436" class="code"><code>&gt;&gt;&gt; a=[1,2,3,4]
+&gt;&gt;&gt; b=[5,6,7,8]
+&gt;&gt;&gt; a+b # 리스트 합치기
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+&gt;&gt;&gt; a[0]=&#x27;something?&#x27; # 리스트 내의 값 바꾸기
+&gt;&gt;&gt; a*2 # 곱하기로 여러 개를 여러번 합치기
+[&#x27;something?&#x27;, 2, 3, 4, &#x27;something?&#x27;, 2, 3, 4]
+
+&gt;&gt;&gt; &#x27;something&#x27; in a # 리스트 안에 요소가 있는지 확인
+True
+
+&gt;&gt;&gt; seq=[1,2,None,True]
+&gt;&gt;&gt; len(seq) # 리스트 길이 구하기, 내장 함수의 형태, seq.length가 아니다!
+4
+
+&gt;&gt;&gt; seq.append(&quot;something&quot;) # 맨 뒤에 요소 추가, method 형태
+&gt;&gt;&gt; seq.extend([5,6]) # 맨 뒤에 리스트 추가, seq +=[5,6]
+&gt;&gt;&gt; seq.insert(1,1.5) # 원하는 곳에 삽입, 1번째에 1.5 삽입, (index, val)
+&gt;&gt;&gt; seq
+[1, 1.5, 2, None, True, &#x27;something&#x27;, 5, 6]
+
+&gt;&gt;&gt; del seq[1] # 1번째 요소 삭제, 예약어 형태, seq.delet가 아니다!
+&gt;&gt;&gt; seq.remove(&#x27;something&#x27;) # 원하는 값을 삭제
+[1,2, None, True, 5,6]</code></pre><p id="36d3cca0-1967-4e64-9560-4985d465e8d5" class="">index 형태를 삭제하기 위해서는 예약어를 사용, value 형태를 삭제하기 위해서는 method 사용</p><h2 id="42f2df69-ad56-4bb0-8f0b-3a0ee2e5667d" class="">(1)-3 Reserved words &amp; Built-in Functions &amp; Methods</h2><p id="7720cfca-cfc9-4d2c-a034-2857d7a54b31" class="">파이썬에서 제공되는 기능은 일반적으로 다음과 같은 형태로 나뉜다.</p><div id="0cd709f0-de3f-468b-a62d-6f56c2dd52c8" class="column-list"><div id="e2b8a80c-8990-471d-8ce6-15b8d55186f2" style="width:33.33333333333333%" class="column"><div><h3 id="dc972011-a7de-4ca9-ac69-f85c81257b76" class="block-color-red">예약어</h3><hr id="c893a3ff-541a-4ff5-8eb0-8c24ac2bba9d"/><ul id="3f3f592b-1c2b-461a-9fc3-be2e0f45950e" class="bulleted-list"><li style="list-style-type:disc">일종의 <mark class="highlight-yellow_background"><strong>문법</strong></mark>적인 요소</li></ul><ul id="1c8a81a6-3521-4f63-8827-b4efc5c60fe8" class="bulleted-list"><li style="list-style-type:disc">괄호를 쓰지 않음</li></ul><ul id="65e7ddf1-59c1-4584-8445-42cce6119380" class="bulleted-list"><li style="list-style-type:disc">재정의 불가능</li></ul><ul id="bc712492-a113-4733-8244-fdd9f78ca86c" class="bulleted-list"><li style="list-style-type:disc">ex) <code>del</code>, <code>if</code>/<code>else</code>, <code>assert</code>, <code>raise</code>, <code>for</code></li></ul></div><p id="c0c06580-45eb-4c55-8f54-922c2d0ae877" class="">
+</p></div><div id="a726d4a1-e4ea-434a-972d-2363b91f2008" style="width:33.33333333333334%" class="column"><div><h3 id="987afeee-7487-4896-a2d4-03500a84ce05" class="block-color-teal">내장함수</h3><hr id="a0567e89-38e1-4473-8a2b-9c74aa408a7e"/><ul id="e5c71509-489a-465c-9075-4888b3175c2d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background">기본 정의</mark>된 함수</li></ul><ul id="1758bd72-ad85-44af-b3db-845eb76a9ed5" class="bulleted-list"><li style="list-style-type:disc">별개의 함수 사용</li></ul><ul id="c0044cb2-5220-44be-8523-fd1081b7b66c" class="bulleted-list"><li style="list-style-type:disc">재정의 가능</li></ul><ul id="85a37367-1c9d-42b4-8533-df4f7d8bee59" class="bulleted-list"><li style="list-style-type:disc">편의성 향상</li></ul><ul id="e67e42ad-7361-450f-a76c-14ed1c30d765" class="bulleted-list"><li style="list-style-type:disc">ex) <code>len()</code>, <code>sum()</code>, <code>range()</code></li></ul></div><p id="210b7537-6eff-48bc-a02f-c9bc3aa3ee89" class="">
+</p></div><div id="01a66fa0-b5aa-4370-9272-071c6706cbde" style="width:33.33333333333333%" class="column"><div><h3 id="523f88f8-459f-418e-ae88-38dd9e1d12fc" class="block-color-blue">메쏘드</h3><hr id="59d6f51f-88b5-4ee5-ac72-0f8ecd7bba38"/><ul id="042da9ba-4fd6-438f-b8f6-bf96f3d71b73" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background">특정 객체</mark> (list, dictonary 등) 내에 정의된 함수</li></ul><ul id="a935d22f-c20b-4f94-bd63-75db2a23495e" class="bulleted-list"><li style="list-style-type:disc">.method()로 접근</li></ul><ul id="96e3e520-0e77-483b-b8b3-db6ac50c8f9d" class="bulleted-list"><li style="list-style-type:disc">Overriding</li></ul><ul id="df23d5b0-17fe-49ca-afb9-e4eecda11df2" class="bulleted-list"><li style="list-style-type:disc">해당 객체를 다룸</li></ul><ul id="fa726a66-1939-48f9-9796-6988dab98aea" class="bulleted-list"><li style="list-style-type:disc">ex) <code>.append()</code>, <code>.insert()</code>, <code>.extend()</code></li></ul></div></div></div><h3 id="2b9c7f69-b705-48a3-a2ab-462fb6249c61" class="block-color-red">① 예약어 (Reserved Words)</h3><table id="4ebcd85f-881e-4b13-a39f-930f3f912c76" class="simple-table"><tbody><tr id="24860e0c-4f0e-4b0f-9c91-2eda52466fde"><th id="aIDz" class="block-color-blue_background simple-table-header">False</th><td id="g~fY" class=""><code>def</code></td><td id="K}Y&lt;" class=""><code>if</code></td><td id=";jYo" class=""><code>raise</code></td></tr><tr id="074bc911-2af7-4a61-b40c-e21f8c539f57"><th id="aIDz" class="block-color-blue_background simple-table-header">None</th><td id="g~fY" class=""><code>del</code></td><td id="K}Y&lt;" class=""><code>import</code></td><td id=";jYo" class=""><code>return</code></td></tr><tr id="f419f187-2212-49d3-9602-ea3db47bc460"><th id="aIDz" class="block-color-blue_background simple-table-header">True</th><td id="g~fY" class=""><code>elif</code></td><td id="K}Y&lt;" class=""><code>in</code></td><td id=";jYo" class=""><code>try</code></td></tr><tr id="85c157fb-0575-4b86-b9d0-2327cdeeb309"><th id="aIDz" class="block-color-blue_background simple-table-header">and</th><td id="g~fY" class=""><code>else</code></td><td id="K}Y&lt;" class=""><code>is</code></td><td id=";jYo" class=""><code>while</code></td></tr><tr id="5927e4b2-d407-4249-8d31-31ad47cf33fc"><th id="aIDz" class="block-color-blue_background simple-table-header">as</th><td id="g~fY" class=""><code>except</code></td><td id="K}Y&lt;" class=""><code>lambda</code></td><td id=";jYo" class=""><code>with</code></td></tr><tr id="455efba4-34d9-4626-ae43-1a6125e0deba"><th id="aIDz" class="block-color-blue_background simple-table-header">assert</th><td id="g~fY" class=""><code>finally</code></td><td id="K}Y&lt;" class=""><code>nonlocal</code></td><td id=";jYo" class=""><code>yield</code></td></tr><tr id="c6beb977-7a8e-4155-8841-1ed19a17d692"><th id="aIDz" class="block-color-blue_background simple-table-header">break</th><td id="g~fY" class=""><code>for</code></td><td id="K}Y&lt;" class=""><code>not</code></td><td id=";jYo" class=""></td></tr><tr id="6d77fda7-afcf-47f7-b5ad-779299d8212e"><th id="aIDz" class="block-color-blue_background simple-table-header">class</th><td id="g~fY" class=""><code>from</code></td><td id="K}Y&lt;" class=""><code>or</code></td><td id=";jYo" class=""></td></tr><tr id="86a4ea2d-3275-499a-83f7-1ebe9d965285"><th id="aIDz" class="block-color-blue_background simple-table-header">continue</th><td id="g~fY" class=""><code>global</code></td><td id="K}Y&lt;" class=""><code>pass</code></td><td id=";jYo" class=""></td></tr></tbody></table><h3 id="3775783f-1e89-4506-8639-152f345b39c7" class="block-color-teal">② 내장함수 (Built-in Functions)</h3><table id="40672de3-49f6-4a96-946d-788d6cc62196" class="simple-table"><tbody><tr id="e32bcca3-4df9-4f3c-9d6c-bff8faf62469"><td id="v[NM" class=""><code>abs()</code></td><td id="iSBO" class=""><code>delattr()</code></td><td id="NUMk" class=""><code>hash()</code></td><td id="JH&lt;X" class=""><code>memoryview()</code></td><td id="h@ZN" class=""><code>set()</code></td></tr><tr id="45fa32d2-e6bb-4f59-b312-6a3fd606da96"><td id="v[NM" class=""><code>all()</code></td><td id="iSBO" class=""><code>dict()</code></td><td id="NUMk" class=""><code>help()</code></td><td id="JH&lt;X" class=""><code>min()</code></td><td id="h@ZN" class=""><code>setattr()</code></td></tr><tr id="f3a50693-9dfd-484f-8ef9-8ea5006c06c4"><td id="v[NM" class=""><code>any()</code></td><td id="iSBO" class=""><code>dir()</code></td><td id="NUMk" class=""><code>hex()</code></td><td id="JH&lt;X" class=""><code>next()</code></td><td id="h@ZN" class=""><code>slice()</code></td></tr><tr id="50ae9fe2-24e8-47e2-a398-0707a4369fa3"><td id="v[NM" class=""><code>ascii()</code></td><td id="iSBO" class=""><code>divmod()</code></td><td id="NUMk" class=""><code>id()</code></td><td id="JH&lt;X" class=""><code>object()</code></td><td id="h@ZN" class=""><code>sorted()</code></td></tr><tr id="e963fa14-826e-43b6-8d95-5fc63605ae32"><td id="v[NM" class=""><code>bin()</code></td><td id="iSBO" class=""><code>enumerate()</code></td><td id="NUMk" class=""><code>input()</code></td><td id="JH&lt;X" class=""><code>oct()</code></td><td id="h@ZN" class=""><code>staticmethod()</code></td></tr><tr id="308cd363-0abf-4f98-8dc0-60cd5cc6c613"><td id="v[NM" class=""><code>bool()</code></td><td id="iSBO" class=""><code>eval()</code></td><td id="NUMk" class=""><code>int()</code></td><td id="JH&lt;X" class=""><code>open()</code></td><td id="h@ZN" class=""><code>str()</code></td></tr><tr id="6b0aaf41-a9f7-4e1c-a279-b2f2be74d1bf"><td id="v[NM" class=""><code>breakpoint()</code></td><td id="iSBO" class=""><code>exec()</code></td><td id="NUMk" class=""><code>isinstance()</code></td><td id="JH&lt;X" class=""><code>ord()</code></td><td id="h@ZN" class=""><code>sum()</code></td></tr><tr id="585baeb0-02a1-4c01-a2c3-41b9d840be96"><td id="v[NM" class=""><code>bytearray()</code></td><td id="iSBO" class=""><code>filter()</code></td><td id="NUMk" class=""><code>issubclass()</code></td><td id="JH&lt;X" class=""><code>pow()</code></td><td id="h@ZN" class=""><code>super()</code></td></tr><tr id="5a4d7e58-5748-4a89-9ce2-6e09ad4dd89d"><td id="v[NM" class=""><code>bytes()</code></td><td id="iSBO" class=""><code>float()</code></td><td id="NUMk" class=""><code>iter()</code></td><td id="JH&lt;X" class=""><code>print()</code></td><td id="h@ZN" class=""><code>tuple()</code></td></tr><tr id="d5bd900d-ad0a-4e5c-8928-6e4d90e9513e"><td id="v[NM" class=""><code>callable()</code></td><td id="iSBO" class=""><code>format()</code></td><td id="NUMk" class=""><code>len()</code></td><td id="JH&lt;X" class=""><code>property()</code></td><td id="h@ZN" class=""><code>type()</code></td></tr><tr id="aea429e5-2620-4729-82d7-e9fcf536eb83"><td id="v[NM" class=""><code>chr()</code></td><td id="iSBO" class=""><code>frozenset()</code></td><td id="NUMk" class=""><code>list()</code></td><td id="JH&lt;X" class=""><code>range()</code></td><td id="h@ZN" class=""><code>vars()</code></td></tr><tr id="185247c1-d836-444e-bedb-44b75957a533"><td id="v[NM" class=""><code>classmethod()</code></td><td id="iSBO" class=""><code>getattr()</code></td><td id="NUMk" class=""><code>locals()</code></td><td id="JH&lt;X" class=""><code>repr()</code></td><td id="h@ZN" class=""><code>zip()</code></td></tr><tr id="2a7b6dd2-47a4-4c6e-b2dc-350df6e8a977"><td id="v[NM" class=""><code>compile()</code></td><td id="iSBO" class=""><code>globals()</code></td><td id="NUMk" class=""><code>map()</code></td><td id="JH&lt;X" class=""><code>reversed()</code></td><td id="h@ZN" class=""><code>__import__()</code></td></tr><tr id="8993f005-7c73-4aa9-9d58-c9879ef8a756"><td id="v[NM" class=""><code>complex()</code></td><td id="iSBO" class=""><code>hasattr()</code></td><td id="NUMk" class=""><code>max()</code></td><td id="JH&lt;X" class=""><code>round()</code></td><td id="h@ZN" class=""></td></tr></tbody></table><p id="e2c0bee9-9afd-423b-b72c-0ba1e54491f3" class=""><mark class="highlight-yellow_background">예약어 → 내장함수 →  메쏘드 → 외부 standard library</mark> 순으로 필요한 함수 검색</p><p id="ac4de4f2-3709-414b-9e50-c99e2c642128" class="">
+</p><h2 id="4fd8bc59-a097-4c7e-9e51-f53ef4c5fd78" class="">(1)-4 List의 메모리 구조</h2><p id="190061e9-4a92-4891-a1da-37fa15ca2d8d" class="">리스트 <strong>안에 다른 모든 객체를 넣는 것이 가능</strong>하며, <strong>2차원 배열</strong> 역시 비슷하게 구현된다.</p><figure id="35035b8b-710b-47c4-86fa-015dad467609" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%208.png"><img style="width:1440px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%208.png"/></a></figure><pre id="35ea4ac0-4107-4121-80aa-df420db7d612" class="code"><code>&gt;&gt;&gt; a=[1, 1.5, 2, [&quot;Oh!&quot;, &quot;Inner List!&quot;]] # List in List
+&gt;&gt;&gt; a
+a=[1, 1.5, 2, [&quot;Oh!&quot;, &quot;Inner List!&quot;]]
+
+&gt;&gt;&gt; a=[[1,2,3], [4,5,6]] # 2차원 list
+&gt;&gt;&gt; a
+[[1,2,3], [4,5,6]] </code></pre><h2 id="7b86bb9d-0db2-48f0-bd59-ee9e165b92ff" class="">(1)-5 List는 가변 데이터 타입!</h2><pre id="b017277b-5756-4a7b-b7bf-5e2e8249184d" class="code"><code>&gt;&gt;&gt; a=[1,2,3,4,5]
+&gt;&gt;&gt; b=a
+&gt;&gt;&gt; a+=[6] # In-place 연산, a=a+[6]과는 다르다.
+&gt;&gt;&gt; b
+[1,2,3,4,5,6]
+
+&gt;&gt;&gt; a=&#x27;Something&#x27; # 불변타입
+&gt;&gt;&gt; b=a # 같은 주소를 가르킨다.
+&gt;&gt;&gt; a += &#x27;?&#x27; # 불변 타입이기 때문에 Out-place, a = a+&#x27;?&#x27;
+&gt;&gt;&gt; b
+&#x27;Something&#x27;
+&gt;&gt;&gt; a
+&#x27;Something?&#x27; # Outplace를 이용해서 문자열이 분리되었다. </code></pre><h2 id="e8099644-03e6-4975-adf7-482569f31277" class="">(1)-6 List 자료 구조의 시간 복잡도</h2><p id="89d5edeb-36d8-4c40-9596-211a9d01538a" class="">Python list는 동적배열로 구현된다.<div class="indented"><ul id="cb3a1b6d-b203-4bc9-8c88-74d195241db2" class="bulleted-list"><li style="list-style-type:disc">동적 배열 : 길이가 dynamic 하다. (정해져 있음)</li></ul></div></p><ul id="ff45f12e-03e2-47c3-b7dc-6c0e5909e1d4" class="bulleted-list"><li style="list-style-type:disc">O(1) = input 크기가 무엇이 던 상관없이 시간이 상수 시간이 걸린다. </li></ul><ul id="cc132926-3c0d-4d69-a114-f6e79824f025" class="bulleted-list"><li style="list-style-type:disc">O(N) = 배열 중간에 값이 추가되기 때문에, 추가되는 값 뒤의 N개만큼 처리 시간이 걸림</li></ul><ul id="3b3de40a-9b60-49fe-b261-b8104fb6491f" class="bulleted-list"><li style="list-style-type:disc">O(N2) : 시간이 O(N long2N)만큼 걸린다. </li></ul><table id="69e1f9ad-4268-405e-b97e-2f41c6a5359d" class="simple-table"><thead class="simple-table-header"><tr id="53a5b94e-76a5-4e05-a69a-305f0fb40710"><th id="[aUO" class="block-color-blue_background simple-table-header">Operation</th><th id="vud~" class="block-color-blue_background simple-table-header">Example</th><th id="sHD~" class="block-color-blue_background simple-table-header">Big-O 표기법</th><th id="hOOF" class="block-color-blue_background simple-table-header" style="width:290.09375px">Notes</th></tr></thead><tbody><tr id="ab9435a6-5891-4d6f-a5f7-5104c84fc350"><td id="[aUO" class="">index</td><td id="vud~" class="">I[i]</td><td id="sHD~" class=""><em>O(1)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="326cf37f-210d-4767-bb5c-33eac6da2486"><td id="[aUO" class="">store</td><td id="vud~" class="">I[i] = 0</td><td id="sHD~" class=""><em>O(1)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="91749da0-e11d-4756-94a7-d23c4153d7d8"><td id="[aUO" class="">length</td><td id="vud~" class="">len(l)</td><td id="sHD~" class=""><em>O(1)O(1)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="5953de53-3d2c-4365-ab55-65d61c277f16"><td id="[aUO" class="">pop</td><td id="vud~" class="">l.pop()</td><td id="sHD~" class=""><em>O(1)</em></td><td id="hOOF" class="" style="width:290.09375px">I.pop(-I) 과 동일</td></tr><tr id="76cff0e3-cbfe-40f3-b88e-976930bafa3c"><td id="[aUO" class="">clear</td><td id="vud~" class="">l.clear()</td><td id="sHD~" class=""><em>O(1)</em></td><td id="hOOF" class="" style="width:290.09375px">I=[]과 유사</td></tr><tr id="602abc04-e285-4cbe-9457-d818503d3785"><td id="[aUO" class="">slice</td><td id="vud~" class="">I[a:b]</td><td id="sHD~" class=""><em>O(b-a)</em></td><td id="hOOF" class="" style="width:290.09375px">I[:]: O(len(I)-0)=O(N)</td></tr><tr id="38ba697c-82a2-41c1-b3b6-e97fe5bc8c34"><td id="[aUO" class="">extend</td><td id="vud~" class="">l.extend(…)</td><td id="sHD~" class=""><em>O(len(…))</em></td><td id="hOOF" class="" style="width:290.09375px">확장 길이에 따라 </td></tr><tr id="276eeae4-e17f-472d-9dd6-30263e2dee20"><td id="[aUO" class="">construction</td><td id="vud~" class="">list(…)</td><td id="sHD~" class=""><em>O(len(…))</em></td><td id="hOOF" class="" style="width:290.09375px">요소 길이에 따라 </td></tr><tr id="cacb9957-d963-4281-8592-799999f9fa60"><td id="[aUO" class="">check ==, !=</td><td id="vud~" class="">l|==|2</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">비교</td></tr><tr id="6cfb6a7c-5096-4e66-b693-4e97511008a3"><td id="[aUO" class="">insert</td><td id="vud~" class="">|.insert(i,v)</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">i 위치에 v를 추가</td></tr><tr id="bc0097f6-94dd-47d5-92ad-8eba6c25ede5"><td id="[aUO" class="">delete</td><td id="vud~" class="">del I[i]</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="b5f36f98-e3bf-4ff1-8e32-05c686986dff"><td id="[aUO" class="">remove</td><td id="vud~" class="">I.remove()</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="748429b3-25f3-4d4f-bdde-6cba131b814c"><td id="[aUO" class="">containmnet</td><td id="vud~" class="">x in/not in I</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">검색</td></tr><tr id="3bdfd809-e09b-40e6-8a9a-0a272c0f6069"><td id="[aUO" class="">copy</td><td id="vud~" class="">I.copy()</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">I[:] 과 동일 - O(N)</td></tr><tr id="1c1df413-7c28-496b-910d-bc3d8424dc22"><td id="[aUO" class="">pop</td><td id="vud~" class="">I.pop(i)</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">I.pop(0):O(N)</td></tr><tr id="a40c4e0f-bb35-41ac-8111-617f5db9ac46"><td id="[aUO" class="">extreme value</td><td id="vud~" class="">min(I)/mac(I)</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px">검색</td></tr><tr id="194b619c-1b45-424b-a787-68e7a7a0047a"><td id="[aUO" class="">reverse</td><td id="vud~" class="">I.reverse()</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px"> 그대로 반대로</td></tr><tr id="f14ae71a-439b-4b30-963e-dce91a556f51"><td id="[aUO" class="">iteration</td><td id="vud~" class="">for v in I:</td><td id="sHD~" class=""><em>O(N)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="28455c56-36a1-4a7a-86aa-e5a7ce08b5f9"><td id="[aUO" class="">sort</td><td id="vud~" class="">I.sort()</td><td id="sHD~" class=""><em>O(N Log N)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="62a90a28-7683-4374-8c4a-cccd9090ea19"><td id="[aUO" class="">multiply</td><td id="vud~" class="">k*I</td><td id="sHD~" class=""><em>O(k N)</em></td><td id="hOOF" class="" style="width:290.09375px"></td></tr><tr id="96acb551-2484-422f-89df-e9bdb1050d43"><td id="[aUO" class=""></td><td id="vud~" class=""></td><td id="sHD~" class=""></td><td id="hOOF" class="" style="width:290.09375px"></td></tr></tbody></table><hr id="cae63b80-38ac-4ce6-aef2-1edcf6979beb"/><h2 id="5819c595-e12f-4fc0-8fdb-cf6279e26620" class="">(2)Tuple</h2><ul id="e8acff62-4c88-4e35-bc52-061fb9c7daf1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">불변 타입 리스트 (Immutable List)</mark></li></ul><ul id="97aac680-f0a4-4cb1-b066-89ff75ffc275" class="bulleted-list"><li style="list-style-type:disc">선언 시 “[]”가 아닌 “()”를 사용, 문맥에 따라 괄호 생략 가능</li></ul><ul id="df31431f-56b4-4f9c-8bab-87452b39dd7f" class="bulleted-list"><li style="list-style-type:disc">리스트의 연산, indexing, slicing등을 동일하게 사용 <pre id="d992c9bd-a828-44e4-a5e1-38b93a5f93e4" class="code"><code>&gt;&gt;&gt; t=(1,2,3,4) # 선언
+&gt;&gt;&gt; t=1,2,3,4 # 괄호 생략 가능
+&gt;&gt;&gt;t
+(1,2,3,4)
+
+&gt;&gt;&gt;len(t) # List의 method 함수들을 사용하는 것이 가능
+4
+&gt;&gt;&gt; t*2
+(1,2,3,4,1,2,3,4)
+
+&gt;&gt;&gt; t[3]= 5 # 불변 타입이라 수정 할수는 없다.
+Trackback (most recent call last) :
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module?
+TypeError: &#x27;tuple&#x27; object does not support item assignment</code></pre></li></ul><h2 id="16b90d63-ae26-4b3d-9a65-e1cdcc7f9792" class="">(2)-1 Tuple의 특징</h2><p id="a57af3c5-6d98-4a01-b850-4e8c2a98597c" class=""><strong>① 일반적으로 함수에서 </strong><strong><mark class="highlight-red">2개 이상의 요소</mark></strong><strong>를 반환할 때 사용</strong><div class="indented"><pre id="e7de8ffb-81df-4947-b909-0c46c409f66c" class="code"><code>&gt;&gt;&gt; (1) # 그냥 괄호는 산술연산자
+1
+&gt;&gt;&gt; (1,) # 요소 1개를 가진 Tuple을 위해서는 &quot;,&quot;을 적어야 한다.</code></pre></div></p><p id="080b4bf8-1c6e-4344-8d7d-d440fb9be53d" class=""><strong>② Tuple은 불변 타입이지만, Tuple 안의 요소는 가변 타입일 수도 있음</strong><div class="indented"><pre id="ecdbd4f1-a26b-411b-bad9-f443fffac8a1" class="code"><code>&gt;&gt;&gt; a=(1, 2, [5, 6, 7]) # 불변 타입 안의 가변 타입
+&gt;&gt;&gt; a[2].append(8) # 가변 타입 내 삽입은 문제 없다.
+&gt;&gt;&gt; a
+(1, 2, [5, 6, 7, 8])</code></pre></div></p><p id="59275c6c-8849-41f1-8a2c-50f5c0ecafe8" class=""><strong>③ 문자열 타입 (str)의 경우 일종의 문자 tuple로 생각이 가능하다.</strong><div class="indented"><p id="29e75b03-1da1-4855-8333-f6e08339af57" class="">→ Indexing 및 slicing이 가능하다.</p><pre id="730b95e5-9c66-4c4b-b35d-c103c8f24dc0" class="code"><code>&gt;&gt;&gt; a=&#x27;some text&#x27; # 불변 타입
+&gt;&gt;&gt; a[:4] # Tuple의 연산자의 사용이 가능하다.
+&#x27;some&#x27;</code></pre></div></p><p id="aa7562e6-aa93-424e-8f69-49f5791eaa88" class="">
+</p><h2 id="a3c2c04a-8fda-400f-a779-bd6d015de50f" class="">(2)-2 Packing &amp; Unpacking</h2><div id="2b00e3b4-5e9d-4457-b240-837a470959d4" class="column-list"><div id="96b93a65-0789-46df-9bf1-98c4013eafa6" style="width:50%" class="column"><div><h3 id="0a95e1b0-11d0-4a40-ac4a-194c8060caca" class="">① Packing : 여러 데이터를 묶는 것</h3><p id="b2a05211-763d-423e-8253-94581da90606" class="">ex) t=1,2,3,4,5</p><pre id="796cced7-259c-4886-9146-07065b7b1ac9" class="code"><code>&gt;&gt;&gt; t=[1,2,3,4,5]
+&gt;&gt;&gt; a, b, c, _, _ =t # Unpacking. a에 1이, b에 2가, _에 4와 5가 각각 담긴다.
+&gt;&gt;&gt; c # &quot;_&quot;는 관습적으로 사용하지 않는 변수에 사용한다.
+3</code></pre></div></div><div id="b14ea2da-3ed0-451e-94fd-e3b5cf69dc61" style="width:50%" class="column"><div><h3 id="72551d7e-f081-4025-914d-1aa22bedf5a2" class="">② Unpacking : 묶인 데이터를 풀기</h3><p id="96db4c4f-c01b-4b22-bb5e-f6de23da75fa" class="">* (Asterisk)으로 남는 요소를 list로 남기기 가능하다.</p><p id="650e853b-88e1-4aa3-836a-d618ecf8bc64" class="">ex) a,b,c,d,e =t</p><pre id="db983c73-2674-4474-a370-3dcdb3f224d4" class="code"><code>&gt;&gt;&gt; a, *b, c =t # *로 남는 부분을 list로 묶을 수 있다.
+&gt;&gt;&gt; a, b, c
+(1, [2, 3, 4], 5)</code></pre></div></div></div><h2 id="00425989-62e7-4f22-9a54-7e86edd28674" class="">(2)-3 Dictionary</h2><p id="d4764e7f-5bc8-47a8-9e6e-35a7b8e55624" class="">일종의 mapping을 위한 데이터 구조이다.<div class="indented"><ul id="ea5f5be8-b442-44d1-af14-63fdb051dda5" class="bulleted-list"><li style="list-style-type:disc">Key → Value 형태로 구현이 된다.<p id="4a44557f-040b-4ac8-ab78-b7c777d0ec11" class=""><mark class="highlight-gray">ex) 1 → ‘something’, (1,2.5)→1.5, ‘text’→2</mark></p></li></ul><ul id="fb900277-a499-4f91-82f6-952341f27290" class="bulleted-list"><li style="list-style-type:disc"><strong>불변 타입으로만 이루어져 있으면 Key로 사용이 가능</strong>하다.</li></ul><ul id="3fc7c785-d140-4b6f-a96e-d5b2d789b5a2" class="bulleted-list"><li style="list-style-type:disc">{Key1:Value1, Key2:Value2, Key3:Value3, …} 형태로 선언이 가능하다.</li></ul><pre id="de8f1e02-af73-4d28-9c89-a5cda62bbfa3" class="code"><code>&gt;&gt;&gt; dictionary ={
+...1:&#x27;something&#x27;, # 1을 &#x27;something&#x27;에 매핑
+... (1,2.5): 1.5, # 정확히는 Hashable할 경우 Key로 사용 가능 (1,2.5)에 대한 값 1.5
+... &#x27;text&#x27;:2, # 마지막 콤마는 무시
+...}
+
+&gt;&gt;&gt; dictionary[1] # 대괄호로 indexing
+&#x27;something&#x27;
+
+&gt;&gt;&gt; dictionary[&#x27;text&#x27;]
+2
+
+&gt;&gt;&gt; dictionary[1, 2.5] # Tuple 이므로 괄호는 생략 가능하다.
+1.5</code></pre></div></p><h2 id="31c71a4f-4ada-447b-9eeb-357b60855555" class="">(2)-4 Dictionary에서 추가&amp;삭제하기</h2><pre id="952cdf78-fb02-4633-b1a3-2692e1e15e55" class="code"><code>&gt;&gt;&gt; dictionary = {} # 빈 딕셔너리 생성, dict()로도 가능
+
+&gt;&gt;&gt; dictionary[&#x27;text&#x27;] =1 # 요소 삽입
+&gt;&gt;&gt; dictionary[&#x27;list&#x27;]=[5,6,7] # Value는 아무 객체나 가능
+&gt;&gt;&gt; dictionary
+{&#x27;text&#x27;:1, &#x27;list&#x27; : [5,6,7]}
+
+&gt;&gt;&gt; dictionary[&#x27;text&#x27;]=&#x27;Oh?&#x27; # 키는 중복이 불가능 -&gt; 덮어 씌워진다.
+&gt;&gt;&gt; dictionary
+{&#x27;text&#x27;:&#x27;Oh?&#x27;, &#x27;list&#x27;:[5,6,7]}
+
+&gt;&gt;&gt; del dictionary[&#x27;text&#x27;] # 요소 삭제
+&gt;&gt;&gt; dictionary
+{&#x27;list&#x27;:[5,6,7]}
+
+&gt;&gt;&gt;len(dictionary) # 크기 확인
+2</code></pre><pre id="6368297e-2d2c-4901-ad4f-ca689257dd60" class="code"><code>&gt;&gt;&gt; dictionary = {&#x27;한국어&#x27;:0, &#x27;영어&#x27;:1, &#x27;중국어&#x27;:2}
+&gt;&gt;&gt; dictionary
+
+&gt;&gt;&gt; dictionary.items() # 모든 key와 value를 일종의 Tuple List로 변환
+dict_items([(&#x27;한국어&#x27;, 0), (&#x27;영어&#x27;, 1), (&#x27;중국어&#x27;, 2)])
+
+&gt;&gt;&gt; dictionary.keys() # 모든 Key를 일종의 List로 반환
+dict_keys([&#x27;한국어&#x27;, &#x27;영어&#x27;, &#x27;중국어&#x27;])
+&gt;&gt;&gt; dictionary.values() # 모든 Value를 일종의 List로 반환
+dict_values([0,1,2])
+
+&gt;&gt;&gt; 2 in dictionary.values() # value 안에 2가 있는지 검사
+True
+&gt;&gt;&gt; &#x27;한국어&#x27; in dictionary.keys()
+True
+&gt;&gt;&gt; &#x27;한국어&#x27; in dictionary # dictionary = dictionary.keys()
+True
+&gt;&gt;&gt; (&#x27;중국어&#x27;,3) in dictionary.items()
+True</code></pre><p id="f9c3a0b0-3cb6-4f3e-afca-2062bb606501" class="">
+</p><h2 id="561ce57b-1430-4831-aa1f-766167fbf72d" class="">(2)-5 Dictionary 자료 구조의 시간 복잡도</h2><p id="70456a9a-4d68-4267-9e06-0f37c550b1ef" class="">Dictionary는 Hash로 구현한다 → indexing threhrk O(1)</p><table id="ff3cbfeb-ec71-421e-b162-541966e3e314" class="simple-table"><thead class="simple-table-header"><tr id="31188073-1683-474d-80e7-b9da9147e504"><th id="oboU" class="block-color-blue_background simple-table-header">Operation</th><th id="@o^\" class="block-color-blue_background simple-table-header">Example</th><th id="|Ggm" class="block-color-blue_background simple-table-header" style="width:83px">Big-O</th><th id="lkg;" class="block-color-blue_background simple-table-header" style="width:197.5px">Notes</th></tr></thead><tbody><tr id="91c0b0a0-c85c-4bb2-b28d-40e2c0ffc8c0"><td id="oboU" class="">Index</td><td id="@o^\" class="">d[k]</td><td id="|Ggm" class="" style="width:83px"><em>O(1)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr><tr id="48a3f47c-ec06-4d42-84a4-73f94f0a3f65"><td id="oboU" class="">Store</td><td id="@o^\" class="">d[k] = v</td><td id="|Ggm" class="" style="width:83px"><em>O(1)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr><tr id="6cb7e73f-33df-4622-9fba-906ea32494ad"><td id="oboU" class="">Length</td><td id="@o^\" class="">len(d)</td><td id="|Ggm" class="" style="width:83px"><em>O(1)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr><tr id="4450e720-9ff1-42a3-96df-f2d7cdfd9466"><td id="oboU" class="">Delete</td><td id="@o^\" class="">del d[k]</td><td id="|Ggm" class="" style="width:83px"><em>O(1)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr><tr id="0fad6c61-920a-42a1-90ea-78a3d6a933cd"><td id="oboU" class="">Clear</td><td id="@o^\" class="">d.clear()</td><td id="|Ggm" class="" style="width:83px"><em>O(1)</em></td><td id="lkg;" class="" style="width:197.5px">s = {} or dict() 와 유사</td></tr><tr id="96bbf658-a0e2-4cfe-9bb9-6664afabc679"><td id="oboU" class="">Construction</td><td id="@o^\" class="">dict(…)</td><td id="|Ggm" class="" style="width:83px"><em>O(N)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr><tr id="368dd624-5100-44bc-a053-4836cb06a18b"><td id="oboU" class="">Iteration</td><td id="@o^\" class="">for k in d:</td><td id="|Ggm" class="" style="width:83px"><em>O(N)</em></td><td id="lkg;" class="" style="width:197.5px"></td></tr></tbody></table><p id="af8e912a-994a-46cd-bb26-20b3dc6a5dce" class="">
+</p><hr id="5ae7d989-325c-43b4-abe6-e19d86cd0174"/><h2 id="1b191224-1ce0-4549-8d46-3ae86047eba4" class="">(3) Set</h2><p id="9faf1268-7dae-4267-a078-aa2fffdb95e6" class="">Dictionary의 Key만 모여 있는 형태로, <mark class="highlight-yellow_background"><strong>집합형</strong></mark></p><pre id="f04dedea-f89e-44ff-a956-51949d0482fa" class="code"><code>&gt;&gt;&gt; s=set([1,2,3,&#x27;text&#x27;]) # set 선언
+&gt;&gt;&gt; s # 빈 set은 set()으로 선언, {}은 빈 dictionary
+{1,2,3,&#x27;text&#x27;}
+
+&gt;&gt;&gt; s.add(4) # 요소 추가
+&gt;&gt;&gt; s.add(&#x27;text&#x27;) # 중복된 요소는 추가하지 않는다. 
+&gt;&gt;&gt; s
+{1, 2, 3, 4, &#x27;text&#x27;}
+
+&gt;&gt;&gt; s.remove(2) # 요소 삭제
+&gt;&gt;&gt; s.remove(99) # 존재하지 않는 요소는 에러 발생
+&gt;&gt;&gt; s
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 5, in &lt;module&gt;
+KeyError: 99
+&gt;&gt;&gt; s.discard(99) # 요소 삭제, 존재하지 않을 경우 무시
+&gt;&gt;&gt; s
+{1, 3, 4, &#x27;text&#x27;}
+
+&gt;&gt;&gt; s.update([1,99,None,True]) # 여러 요소 추가, 중복은 무시
+&gt;&gt;&gt; s 
+{1, 3, 4, 99, &#x27;text&#x27;, None}
+
+&gt;&gt;&gt; s.clear() # set 비우기
+&gt;&gt;&gt; s
+set()</code></pre><h2 id="1f8cc07b-472d-48a7-b087-e2c6ec3256b9" class="">(3)-1 Set의 동작</h2><p id="4eaaebb6-5549-4201-ac23-bab3195932cc" class="">수학적 집합 연산자가 존재한다.</p><div id="918b5a49-bda2-4e84-ac4b-9f95de48b6d6" class="column-list"><div id="bdc98ce1-e8af-4d17-9362-4af66d775d74" style="width:50%" class="column"><pre id="eb298a97-f5c5-4bac-820f-7bdbebd247b4" class="code"><code>&gt;&gt;&gt; s1=set([1,2,3,4])
+&gt;&gt;&gt; s2=set([3,4,5,6])
+&gt;&gt;&gt; s1&amp;s2 # 교집합
+{3, 4}
+&gt;&gt;&gt; s1|s2 # 합집합
+{1, 2, 3, 4, 5, 6}
+&gt;&gt;&gt; s1-s2 # 차집함
+{1, 2}
+&gt;&gt;&gt; s1^s2 # 배타적 합집합
+{1, 2}</code></pre></div><div id="67e62528-5b53-4c7f-b7cf-edd5e96f9fa8" style="width:50%" class="column"><figure id="27d642ec-664d-4c80-9623-34eb24eb5565" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%209.png"><img style="width:888px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%209.png"/></a></figure></div></div><p id="4590e272-73b9-4a3b-b000-f50699a3d605" class="">* frozenset()은 불변 타입이기 떄문에 key 값으로도 사용이 가능하며 set으로도 사용가능하다.</p></div><h1 id="ffdc9115-fc36-420d-9927-2d06fba866e6" class=""><details open=""><summary>😯❓ Q&amp;A</summary></details></h1><div class="indented"><h2 id="dc224bc3-614f-47d2-926b-7f819fe4064e" class="">1. List Operation</h2><figure id="38311d85-7d2e-4ec8-bb58-4edf78296727" class="image"><a href="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%2010.png"><img style="width:1090px" src="22%2012%2019%20TIL%207409f8a45409431a9190debce7e6e662/Untitled%2010.png"/></a></figure><p id="43be34b2-8bdf-4eab-9736-b7f2b2a59005" class="">실행 시 왜 True가 나오지 않는 것일까?</p></div><p id="a5f385e8-2364-41dc-8363-55b035a7ceab" class="">
+</p><p id="70253a26-229b-4a17-937a-5acc89a88721" class="">
+</p><p id="f42f208c-9d65-4470-a959-110cbe6eac74" class="">
+</p></div></article></body></html>
